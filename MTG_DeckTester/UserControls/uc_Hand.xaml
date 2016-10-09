@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="MTG_DeckTester.UserControls.uc_Hand"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MTG_DeckTester.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="150" d:DesignWidth="1000">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Image Grid.Column="0" x:Name="img_card_0"/>
+        <Image Grid.Column="1" x:Name="img_card_1"/>
+        <Image Grid.Column="2" x:Name="img_card_2"/>
+        <Image Grid.Column="3" x:Name="img_card_3"/>
+        <Image Grid.Column="4" x:Name="img_card_4"/>
+        <Image Grid.Column="5" x:Name="img_card_5"/>
+        <Image Grid.Column="6" x:Name="img_card_6"/>
+        <Image Grid.Column="7" x:Name="img_card_7"/>
+        <Image Grid.Column="8" x:Name="img_card_8"/>
+        <Button x:Name="btn_hand_list" Content="+" Grid.Column="9" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+    </Grid>
+</UserControl>

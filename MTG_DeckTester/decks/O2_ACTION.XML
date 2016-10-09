@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSet xmlns="http://tempuri.org/">
+<xs:schema id="NewDataSet" targetNamespace="http://tempuri.org/data.xsd" xmlns="http://tempuri.org/data.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+
+<xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+
+<xs:complexType>
+
+<xs:choice minOccurs="0" maxOccurs="unbounded">
+
+<xs:element name="WXMLACT">
+
+<xs:complexType>
+
+<xs:sequence>
+
+<xs:element name="IDENT_ACT" type="xs:string" minOccurs="0">
+
+</xs:element><xs:element name="IDENT_CLI" type="xs:string" minOccurs="0">
+
+</xs:element><xs:element name="CODE" type="xs:string" minOccurs="0">
+
+</xs:element><xs:element name="DESIG" type="xs:string" minOccurs="0">
+
+</xs:element><xs:element name="DESIG_RED" type="xs:string" minOccurs="0">
+
+</xs:element><xs:element name="DATE_DEB" type="xs:dateTime" minOccurs="0">
+
+</xs:element><xs:element name="DATE_FIN" type="xs:dateTime" minOccurs="0">
+
+</xs:element></xs:sequence></xs:complexType></xs:element></xs:choice></xs:complexType></xs:element></xs:schema><NewDataSet xmlns="http://tempuri.org/data.xsd">
+<WXMLACT>
+<IDENT_ACT>10486</IDENT_ACT>
+<IDENT_CLI>382</IDENT_CLI>
+<CODE>15282</CODE>
+<DESIG>PCP DP ILIADE ST CHAMOND</DESIG>
+<DESIG_RED>PCP DP ILIADE ST CHAMOND</DESIG_RED>
+<DATE_DEB>2015-09-21T00:00:00-00:00</DATE_DEB>
+<DATE_FIN>2016-01-28T00:00:00-00:00</DATE_FIN>
+</WXMLACT>
+<WXMLACT>
+<IDENT_ACT>10493</IDENT_ACT>
+<IDENT_CLI>382</IDENT_CLI>
+<CODE>15289</CODE>
+<DESIG>PCP EPP  RIVE DE GIER</DESIG>
+<DESIG_RED>PCP EPP  RIVE DE GIER</DESIG_RED>
+<DATE_DEB>2015-09-17T00:00:00-00:00</DATE_DEB>
+<DATE_FIN>2016-03-17T00:00:00-00:00</DATE_FIN>
+</WXMLACT>
+<WXMLACT>
+<IDENT_ACT>10748</IDENT_ACT>
+<IDENT_CLI>382</IDENT_CLI>
+<CODE>16078</CODE>
+<DESIG>Démarche d'insertion sociale et professionnelle
+Préparation à la qualificaiton et à l'emploi</DESIG>
+<DESIG_RED>PCP C1+C3 BELLEVILLE</DESIG_RED>
+<DATE_DEB>2016-02-19T00:00:00-00:00</DATE_DEB>
+<DATE_FIN>2016-12-31T00:00:00-00:00</DATE_FIN>
+</WXMLACT>
+<WXMLACT>
+<IDENT_ACT>10943</IDENT_ACT>
+<IDENT_CLI>382</IDENT_CLI>
+<CODE>16272</CODE>
+<DESIG>PCP  FLE - ILIADE ST ETIENNE</DESIG>
+<DESIG_RED>PCP  FLE - ILIADE </DESIG_RED>
+<DATE_DEB>2016-03-07T00:00:00-00:00</DATE_DEB>
+<DATE_FIN>2016-07-27T00:00:00-00:00</DATE_FIN>
+</WXMLACT>
+<WXMLACT>
+<IDENT_ACT>10944</IDENT_ACT>
+<IDENT_CLI>382</IDENT_CLI>
+<CODE>16273</CODE>
+<DESIG>PCP EAPP 2  ILIADE ST ETIENNE</DESIG>
+<DESIG_RED>PCP EAPP 2  ILIADE ST ETIENNE</DESIG_RED>
+<DATE_DEB>2016-03-07T00:00:00-00:00</DATE_DEB>
+<DATE_FIN>2016-07-27T00:00:00-00:00</DATE_FIN>
+</WXMLACT>
+<WXMLACT>
+<IDENT_ACT>10998</IDENT_ACT>
+<IDENT_CLI>382</IDENT_CLI>
+<CODE>16327</CODE>
+<DESIG>PCP LOT 20 - INGENIERIE BEAUJOLAIS</DESIG>
+<DESIG_RED>PCP LOT 20 - INGENIERIE 69</DESIG_RED>
+<DATE_DEB>2016-03-01T00:00:00-00:00</DATE_DEB>
+<DATE_FIN>2016-12-31T00:00:00-00:00</DATE_FIN>
+</WXMLACT>
+<WXMLACT>
+<IDENT_ACT>11001</IDENT_ACT>
+<IDENT_CLI>382</IDENT_CLI>
+<CODE>16330</CODE>
+<DESIG>PCP SIPTFLE ILIADE- ST ETIENNE</DESIG>
+<DESIG_RED>PCP SIPT FLE ILIADE - ST ETIEN</DESIG_RED>
+<DATE_DEB>2016-05-02T00:00:00-00:00</DATE_DEB>
+<DATE_FIN>2016-10-04T00:00:00-00:00</DATE_FIN>
+</WXMLACT>
+<WXMLACT>
+<IDENT_ACT>11006</IDENT_ACT>
+<IDENT_CLI>382</IDENT_CLI>
+<CODE>16335</CODE>
+<DESIG>PCP TESTER METIERS PORTEURS-  TARARE</DESIG>
+<DESIG_RED>PCP TEST METIERS PORTEURS  TAR</DESIG_RED>
+<DATE_DEB>2016-10-03T00:00:00-00:00</DATE_DEB>
+<DATE_FIN>2017-01-26T00:00:00-00:00</DATE_FIN>
+</WXMLACT>
+</NewDataSet></DataSet>

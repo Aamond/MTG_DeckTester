@@ -13,22 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MTG_DeckTester
+namespace MTG_DeckTester.UserControls
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for uc_Hand.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class uc_Hand : UserControl
     {
-        public static string CurrentUser_Name;
-        public static string CurrentUser_IP;
 
-        public MainWindow()
+        public uc_Hand()
         {
-            CurrentUser_IP = "127.0.0.1";
-            CurrentUser_Name = "Aamond";
-
-
 
             InitializeComponent();
         }

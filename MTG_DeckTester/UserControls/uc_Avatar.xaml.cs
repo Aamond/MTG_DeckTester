@@ -1,0 +1,135 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.IO;
+using System.Windows.Shapes;
+
+namespace MTG_DeckTester.UserControls
+{
+
+    public partial class uc_Avatar : UserControl
+    {
+        int hp;
+        string deck_color;
+
+        public uc_Avatar()
+        {
+
+            string CurrentUser_Name = "Aamond";
+            string _uri;
+
+            InitializeComponent();
+
+            //Init des Hp (par défaut 20)
+            int hp = 20;
+            lbl_hp.Content = hp.ToString();
+
+            //Chargement de l'avatar
+            if (File.Exists(new Uri("players/" + CurrentUser_Name + "/" + CurrentUser_Name + ".png", UriKind.Relative).ToString()))
+            {
+                img_avatar.Source = new BitmapImage(new Uri("players/" + CurrentUser_Name + "/" + CurrentUser_Name + ".png", UriKind.Relative)));
+            }
+            else
+            {
+                img_avatar.Source = new BitmapImage(new Uri("players/" + CurrentUser_Name + "/ default.png", UriKind.Relative));
+            }
+
+            //Chargement de la couleur du deck
+                
+            _uri = "img/deck_colors/";
+            switch (deck_color)
+            {
+                //Incolore
+                case "uncolor":
+                    img_deck_color.Source = new BitmapImage(new Uri(_uri + deck_color + ".png", UriKind.Relative));
+                    break;
+                //Bleu
+                case "blue":
+                    img_deck_color.Source = new BitmapImage(new Uri(_uri + deck_color + ".png", UriKind.Relative));
+                    break;
+                //Rouge
+                case "red":
+                    img_deck_color.Source = new BitmapImage(new Uri(_uri + deck_color + ".png", UriKind.Relative));
+                    break;
+                //Vert
+                case "green":
+                    img_deck_color.Source = new BitmapImage(new Uri(_uri + deck_color + ".png", UriKind.Relative));
+                    break;
+                //Blanc
+                case "white":
+                    img_deck_color.Source = new BitmapImage(new Uri(_uri + deck_color + ".png", UriKind.Relative));
+                    break;
+                //Noir
+                case "black":
+                    img_deck_color.Source = new BitmapImage(new Uri(_uri + deck_color + ".png", UriKind.Relative));
+                    break;
+                //Autre cas, non géré
+                default:
+                    break;
+            }
+        }
+
+        private void Hp_Down(object sender, MouseButtonEventArgs e)
+        {
+            hp--;
+            lbl_hp.Content = hp.ToString();
+        }
+
+        private void Hp_Up(object sender, MouseButtonEventArgs e)
+        {
+            hp++;
+            lbl_hp.Content = hp.ToString();
+        }
+
+        private void Change_DeckColor(object sender, MouseButtonEventArgs e)
+        {
+            string _uri = "img / deck_colors / ";
+
+            if (deck_color == "uncolor")
+            {
+                deck_color = "blue";
+                img_deck_color.Source = new BitmapImage(new Uri(_uri + deck_color + ".png", UriKind.Relative));
+            }
+
+            if (deck_color == "blue")
+            {
+                deck_color = "red";
+                img_deck_color.Source = new BitmapImage(new Uri(_uri + deck_color + ".png", UriKind.Relative));
+            }
+
+            if (deck_color == "red")
+            {
+                deck_color = "green";
+                img_deck_color.Source = new BitmapImage(new Uri(_uri + deck_color + ".png", UriKind.Relative));
+            }
+
+            if (deck_color == "green")
+            {
+                deck_color = "white";
+                img_deck_color.Source = new BitmapImage(new Uri(_uri + deck_color + ".png", UriKind.Relative));
+            }
+
+            if (deck_color == "white")
+            {
+                deck_color = "black";
+                img_deck_color.Source = new BitmapImage(new Uri(_uri + deck_color + ".png", UriKind.Relative));
+            }
+
+            if (deck_color == "black")
+            {
+                deck_color = "uncolor";
+                img_deck_color.Source = new BitmapImage(new Uri(_uri + deck_color + ".png", UriKind.Relative));
+            }
+        }
+    }
+}

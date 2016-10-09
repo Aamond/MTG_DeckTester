@@ -55,6 +55,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UserClasses\Card.cs" />
+    <Compile Include="UserClasses\Deck.cs" />
+    <Compile Include="UserControls\uc_Avatar.xaml.cs">
+      <DependentUpon>uc_Avatar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\uc_Hand.xaml.cs">
+      <DependentUpon>uc_Hand.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,6 +75,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UserControls\uc_Avatar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\uc_Hand.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -94,6 +110,29 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\avatars\Yugi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\deck_colors\black.png" />
+    <Resource Include="img\deck_colors\blue.png" />
+    <Resource Include="img\deck_colors\green.png" />
+    <Resource Include="img\deck_colors\red.png" />
+    <Resource Include="img\deck_colors\uncolor.png" />
+    <Resource Include="img\deck_colors\white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="decks\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="players\Aamond\default.png" />
+    <Resource Include="players\Alside\default.png" />
+    <Resource Include="players\Khellendros\default.png" />
+    <Resource Include="players\Lineas\default.png" />
+    <Resource Include="players\Memnarck\default.png" />
+    <Resource Include="players\Oniwyr\default.png" />
+    <Resource Include="players\Ralgamaziel\default.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

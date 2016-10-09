@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="iso-8859-1"?>  
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSet xmlns="http://tempuri.org/">
+<xs:schema id="NewDataSet" targetNamespace="http://tempuri.org/data.xsd" xmlns="http://tempuri.org/data.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+
+<xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+
+<xs:complexType>
+
+<xs:choice minOccurs="0" maxOccurs="unbounded">
+
+<xs:element name="WXMLACT">
+
+<xs:complexType>
+
+<xs:sequence>
+
+<xs:element name="IDENT_ACT" type="xs:string" minOccurs="0">
+
+</xs:element><xs:element name="IDENT_CLI" type="xs:string" minOccurs="0">
+
+</xs:element><xs:element name="CODE" type="xs:string" minOccurs="0">
+
+</xs:element><xs:element name="DESIG" type="xs:string" minOccurs="0">
+
+</xs:element><xs:element name="DESIG_RED" type="xs:string" minOccurs="0">
+
+</xs:element><xs:element name="DATE_DEB" type="xs:dateTime" minOccurs="0">
+
+</xs:element><xs:element name="DATE_FIN" type="xs:dateTime" minOccurs="0">
+
+</xs:element></xs:sequence></xs:complexType></xs:element></xs:choice></xs:complexType></xs:element></xs:schema><NewDataSet xmlns="http://tempuri.org/data.xsd">
+
+
+<deck nbCartes="68" couleur="blue" auteur="Aamond">
+	<carte>
+		<img>000001.jpg</img>
+		<nom>Gohei oublié</nom>
+		<masterType>Artefact</masterType>
+		<legendaire>0</legendaire>
+		<nbOccurences>2</nbOccurences>
+	</carte>
+	<carte>
+		<img>000025.jpg</img>
+		<nom>Fileur de vie</nom>
+		<masterType>Créature</masterType>
+		<legendaire>0</legendaire>
+		<nbOccurences>2</nbOccurences>
+	</carte>
+	<carte>
+		<img>000002.jpg</img>
+		<nom>Kami Hana</nom>
+		<masterType>Créature</masterType>
+		<legendaire>0</legendaire>
+		<nbOccurences>3</nbOccurences>
+	</carte>
+	<carte>
+		<img>000003.jpg</img>
+		<nom>Ancêtre de la tribu Sakura</nom>
+		<masterType>Créature</masterType>
+		<legendaire>0</legendaire>
+		<nbOccurences>2</nbOccurences>
+	</carte>
+	<carte>
+		<img>000004.jpg</img>
+		<nom>Zubera à la langue baveuse</nom>
+		<masterType>Créature</masterType>
+		<nbOccurences>4</nbOccurences>
+	</carte>
+	<carte>
+		<img>000005.jpg</img>
+		<nom>Zubera à la peau cendreuse</nom>
+		<masterType>Créature</masterType>
+		<legendaire>0</legendaire>
+		<nbOccurences>4</nbOccurences>
+	</carte>
+	<carte>
+		<img>000006.jpg</img>
+		<nom>Zubera au chant silencieux</nom>
+		<masterType>Créature</masterType>
+		<legendaire>0</legendaire>
+		<nbOccurences>4</nbOccurences>
+	</carte>
+	<carte>
+		<img>000007.jpg</img>
+		<nom>Zubera au poings de braise</nom>
+		<masterType>Créature</masterType>
+		<legendaire>0</legendaire>
+		<nbOccurences>4</nbOccurences>
+	</carte>
+	<carte>
+		<img>000008.jpg</img>
+		<nom>Zubera aux rêves flottants</nom>
+		<masterType>Créature</masterType>
+		<legendaire>0</legendaire>
+		<nbOccurences>4</nbOccurences>
+	</carte>
+	<carte>
+		<img>000009.jpg</img>
+		<nom>Rage dévorante</nom>
+		<masterType>Éphémère</masterType>
+		<legendaire>0</legendaire>
+		<nbOccurences>3</nbOccurences>
+	</carte>
+	<carte>
+		<img>000010.jpg</img>
+		<nom>Réanimation sans âme</nom>
+		<masterType>Éphémère</masterType>
+		<legendaire>0</legendaire>
+		<nbOccurences>2</nbOccurences>
+	</carte>
+	<carte>
+		<img>000011.jpg</img>
+		<nom>Sonder les brumes</nom>
+		<masterType>Éphémère</masterType>
+		<legendaire>0</legendaire>
+		<nbOccurences>2</nbOccurences>
+	</carte>
+	<carte>
+		<img>000012.jpg</img>
+		<nom>Noyau de Mirrodin</nom>
+		<masterType>Terrain</masterType>
+		<legendaire>0</legendaire>
+		<nbOccurences>3</nbOccurences>
+	</carte>
+	<carte>
+		<img>000013.jpg</img>
+		<nom>Immensité terramorphe</nom>
+		<masterType>Terrain</masterType>
+		<legendaire>0</legendaire>
+		<nbOccurences>3</nbOccurences>
+	</carte>
+	<carte>
+		<img>000014.jpg</img>
+		<nom>Sekki, le guide des saisons</nom>
+		<masterType>Créature</masterType>
+		<legendaire>1</legendaire>
+		<nbOccurences>1</nbOccurences>
+	</carte>
+	<carte>
+		<img>000015.jpg</img>
+		<nom>Shirei, pourvoyeur de Shizo</nom>
+		<masterType>Créature</masterType>
+		<legendaire>1</legendaire>
+		<nbOccurences>2</nbOccurences>
+	</carte>
+	<carte>
+		<img>000016.jpg</img>
+		<nom>Marée solaire</nom>
+		<masterType>Rituel</masterType>
+		<legendaire>0</legendaire>
+		<nbOccurences>2</nbOccurences>
+	</carte>
+	<carte>
+		<img>000017.jpg</img>
+		<nom>Avidité dévorante</nom>
+		<masterType>Rituel</masterType>
+		<legendaire>0</legendaire>
+		<nbOccurences>3</nbOccurences>
+	</carte>
+	<carte>
+		<img>000018.jpg</img>
+		<nom>Portée du kodama</nom>
+		<masterType>Rituel</masterType>
+		<legendaire>0</legendaire>
+		<nbOccurences>3</nbOccurences>
+	</carte>
+	<carte>
+		<img>000019.jpg</img>
+		<nom>Rubans du Reikai</nom>
+		<masterType>Rituel</masterType>
+		<legendaire>0</legendaire>
+		<nbOccurences>1</nbOccurences>
+	</carte>
+	<carte>
+		<img>000020.jpg</img>
+		<nom>Forêt</nom>
+		<masterType>Terrain de base</masterType>
+		<legendaire>0</legendaire>
+		<nbOccurences>3</nbOccurences>
+	</carte>
+	<carte>
+		<img>000021.jpg</img>
+		<nom>Île</nom>
+		<masterType>Terrain de base</masterType>
+		<legendaire>0</legendaire>
+		<nbOccurences>2</nbOccurences>
+	</carte>
+	<carte>
+		<img>000022.jpg</img>
+		<nom>Marais</nom>
+		<masterType>Terrain de base</masterType>
+		<legendaire>0</legendaire>
+		<nbOccurences>3</nbOccurences>
+	</carte>
+	<carte>
+		<img>000023.jpg</img>
+		<nom>Montagne</nom>
+		<masterType>Terrain de base</masterType>
+		<legendaire>0</legendaire>
+		<nbOccurences>3</nbOccurences>
+	</carte>
+	<carte>
+		<img>000024.jpg</img>
+		<nom>Plaine</nom>
+		<masterType>Terrain de base</masterType>
+		<legendaire>0</legendaire>
+		<nbOccurences>3</nbOccurences>
+	</carte>
+</deck>
