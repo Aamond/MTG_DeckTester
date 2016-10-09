@@ -112,9 +112,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\avatars\Yugi.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="img\deck_colors\black.png" />
     <Resource Include="img\deck_colors\blue.png" />
     <Resource Include="img\deck_colors\green.png" />
@@ -133,6 +130,9 @@
     <Resource Include="players\Memnarck\default.png" />
     <Resource Include="players\Oniwyr\default.png" />
     <Resource Include="players\Ralgamaziel\default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="players\Aamond\Aamond.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="Magic The Gathering - DeckTester (Powered by Aamond)" Height="700" Width="1280" MinWidth="1280" MinHeight="700">
     <Grid>
-        <Grid Background="#FFCF5454" Height="100" VerticalAlignment="Bottom">
+        <Grid Height="100" VerticalAlignment="Bottom">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="100*"/>
                 <ColumnDefinition Width="461*"/>
@@ -18,7 +18,5 @@
             <UserControls:uc_Hand Grid.Column="1"/>
             <Button Grid.Column="2" x:Name="btn_EndTurn" Content="Fin de tour" Margin="19,21,19,25" RenderTransformOrigin="-0.533,-1.1" Background="#FF6E6A6A" FontSize="20" FontFamily="Trebuchet MS" FontWeight="Bold" BorderThickness="2"/>
         </Grid>
-        <Rectangle Fill="#000000" Margin="0,350,0,307"  Stroke="Black"/>
-
     </Grid>
 </Window>

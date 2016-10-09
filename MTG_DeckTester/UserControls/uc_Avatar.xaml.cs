@@ -27,6 +27,7 @@ namespace MTG_DeckTester.UserControls
 
             string CurrentUser_Name = "Aamond";
             string _uri;
+            string _dossier;
 
             InitializeComponent();
 
@@ -35,13 +36,25 @@ namespace MTG_DeckTester.UserControls
             lbl_hp.Content = hp.ToString();
 
             //Chargement de l'avatar
-            if (File.Exists(new Uri("players/" + CurrentUser_Name + "/" + CurrentUser_Name + ".png", UriKind.Relative).ToString()))
+            _dossier = new Uri("players / " + CurrentUser_Name, UriKind.Relative).ToString();
+            if (Directory.Exists(_dossier))
             {
-                img_avatar.Source = new BitmapImage(new Uri("players/" + CurrentUser_Name + "/" + CurrentUser_Name + ".png", UriKind.Relative)));
-            }
-            else
-            {
-                img_avatar.Source = new BitmapImage(new Uri("players/" + CurrentUser_Name + "/ default.png", UriKind.Relative));
+                if (File.Exists(_dossier + "/" + CurrentUser_Name + ".png"))
+                {
+                    BitmapImage b = new BitmapImage();
+                    b.BeginInit();
+                    b.UriSource = new Uri(_dossier + CurrentUser_Name + ".png");
+                    b.EndInit();
+                    img_avatar.Source = b;
+                }
+                else
+                {
+                    BitmapImage b = new BitmapImage();
+                    b.BeginInit();
+                    b.UriSource = new Uri(_dossier + "default.png");
+                    b.EndInit();
+                    img_avatar.Source = b;
+                }
             }
 
             //Chargement de la couleur du deck
@@ -104,7 +117,11 @@ namespace MTG_DeckTester.UserControls
             if (deck_color == "blue")
             {
                 deck_color = "red";
-                img_deck_color.Source = new BitmapImage(new Uri(_uri + deck_color + ".png", UriKind.Relative));
+                BitmapImage b = new BitmapImage();
+                b.BeginInit();
+                b.UriSource = new Uri(_uri + deck_color + ".png", UriKind.Relative);
+                b.EndInit();
+                img_deck_color.Source = b;
             }
 
             if (deck_color == "red")
