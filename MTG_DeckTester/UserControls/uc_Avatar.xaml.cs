@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.IO;
 using System.Windows.Shapes;
+using System.Configuration;
 
 namespace MTG_DeckTester.UserControls
 {
@@ -36,14 +37,14 @@ namespace MTG_DeckTester.UserControls
             lbl_hp.Content = hp.ToString();
 
             //Chargement de l'avatar
-            _dossier = new Uri("players / " + CurrentUser_Name, UriKind.Relative).ToString();
+            _dossier = ConfigurationManager.AppSettings["playerDirectory"];
             if (Directory.Exists(_dossier))
             {
                 if (File.Exists(_dossier + "/" + CurrentUser_Name + ".png"))
                 {
                     BitmapImage b = new BitmapImage();
                     b.BeginInit();
-                    b.UriSource = new Uri(_dossier + CurrentUser_Name + ".png");
+                    b.UriSource = new Uri("pack://application:,,,/players/Aamond.png");
                     b.EndInit();
                     img_avatar.Source = b;
                 }
@@ -57,8 +58,7 @@ namespace MTG_DeckTester.UserControls
                 }
             }
 
-            //Chargement de la couleur du deck
-                
+            //Chargement de la couleur du deck                
             _uri = "img/deck_colors/";
             switch (deck_color)
             {

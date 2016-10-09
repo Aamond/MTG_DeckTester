@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -112,27 +113,55 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\deck_colors\black.png" />
-    <Resource Include="img\deck_colors\blue.png" />
-    <Resource Include="img\deck_colors\green.png" />
-    <Resource Include="img\deck_colors\red.png" />
-    <Resource Include="img\deck_colors\uncolor.png" />
-    <Resource Include="img\deck_colors\white.png" />
+    <Resource Include="img\deck_colors\black.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\deck_colors\blue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\deck_colors\green.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\deck_colors\red.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\deck_colors\uncolor.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\deck_colors\white.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="decks\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="players\Aamond\default.png" />
-    <Resource Include="players\Alside\default.png" />
-    <Resource Include="players\Khellendros\default.png" />
-    <Resource Include="players\Lineas\default.png" />
-    <Resource Include="players\Memnarck\default.png" />
-    <Resource Include="players\Oniwyr\default.png" />
-    <Resource Include="players\Ralgamaziel\default.png" />
+    <Resource Include="players\Aamond\default.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="players\Alside\default.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="players\Khellendros\default.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="players\Lineas\default.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="players\Memnarck\default.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="players\Oniwyr\default.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="players\Ralgamaziel\default.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="players\Aamond\Aamond.png" />
+    <Content Include="players\Aamond\Aamond.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
