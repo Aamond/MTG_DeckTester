@@ -106,7 +106,7 @@ namespace MTG_DeckTester.UserControls
 
         private void Change_DeckColor(object sender, MouseButtonEventArgs e)
         {
-            string _uri = "img / deck_colors / ";
+            string _uri = "img/deck_colors / ";
 
             if (deck_color == "uncolor")
             {
