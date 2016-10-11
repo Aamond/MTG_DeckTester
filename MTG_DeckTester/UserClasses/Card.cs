@@ -4,15 +4,21 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace MTG_DeckTester.UserClasses
 {
+    [Serializable]
     public class Card
     {
-        string _id;
-        string _nom;
-        string _masterType;
-        bool _estLegendaire;
+        [XmlAttribute()]
+        string ID_Carte { get; set; }
+        [XmlAttribute()]
+        string Nom_Carte { get; set; }
+        [XmlAttribute()]
+        string MasterType { get; set; }
+        [XmlAttribute()]
+        bool EstLegendaire { get; set; }
 
         /// <summary>
         /// 
@@ -21,20 +27,12 @@ namespace MTG_DeckTester.UserClasses
         /// <param name="nom">Nom de la carte</param>
         /// <param name="mastertype">Type principal de la carte</param>
         /// <param name="legendaire">1/True = Légendaire sinon pas légendaire</param>
-        public Card(string id, string nom, string mastertype, int legendaire)
+        public Card(string id, string nom, string mastertype, bool legendaire)
         {
-            _id = id;
-            _nom = nom;
-            _masterType = mastertype;
-
-            if (legendaire == 1)
-            {
-                _estLegendaire = true;
-            }
-            else
-            {
-                _estLegendaire = false;
-            }            
+            ID_Carte = id;
+            Nom_Carte = nom;
+            MasterType = mastertype;
+            EstLegendaire = legendaire;          
         }
     }
 

@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.IO;
 using System.Windows.Shapes;
 using System.Configuration;
+using MTG_DeckTester.UserClasses;
 
 namespace MTG_DeckTester.UserControls
 {
@@ -26,7 +27,6 @@ namespace MTG_DeckTester.UserControls
         public uc_Avatar()
         {
 
-            string CurrentUser_Name = "Aamond";
             string _uri;
             string _dossier;
 
@@ -37,10 +37,10 @@ namespace MTG_DeckTester.UserControls
             lbl_hp.Content = hp.ToString();
 
             //Chargement de l'avatar
-            _dossier = ConfigurationManager.AppSettings["playerDirectory"];
+            _dossier = "./players/" + Global.CurrentUser_Name;
             if (Directory.Exists(_dossier))
             {
-                if (File.Exists(_dossier + "/" + CurrentUser_Name + ".png"))
+                if (File.Exists(_dossier + "/" + Global.CurrentUser_Name + ".png"))
                 {
                     BitmapImage b = new BitmapImage();
                     b.BeginInit();

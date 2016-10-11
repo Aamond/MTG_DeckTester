@@ -23,7 +23,6 @@ namespace MTG_DeckTester.UserControls
 
         public uc_Hand()
         {
-
             InitializeComponent();
         }
     }
