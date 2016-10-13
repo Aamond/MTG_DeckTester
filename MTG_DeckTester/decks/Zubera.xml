@@ -1,212 +1,416 @@
-<?xml. version="1.0" encoding="iso 8859-1"?>
-<DataSet xmlns="http://tempuri.org/">
-  <xs:schema id="NewDataSet" targetNamespace="http://tempuri.org/data.xsd" xmlns="http://tempuri.org/data.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
-
-    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
-
-      <xs:complexType>
-
-        <xs:choice minOccurs="0" maxOccurs="unbounded">
-
-          <xs:element name="deck" nbCartes="" couleur="" auteur="">
-            <xs:element name="carte">
-
-              <xs:complexType>
-
-                <xs:sequence>
-
-                  <xs:element name="img" type="xs:string" minOccurs="0"></xs:element>
-                  <xs:element name="nom" type="xs:string" minOccurs="0"></xs:element>
-                  <xs:element name="mastertype" type="xs:string" minOccurs="0"></xs:element>
-                  <xs:element name="legendaire" type="xs:string" minOccurs="0"></xs:element>
-                  <xs:element name="nbOccurences" type="xs:integer" minOccurs="0"></xs:element>
-
-                </xs:sequence>
-              </xs:complexType>
-            </xs:element>
-          </xs:element>
-        </xs:choice>
-      </xs:complexType>
-    </xs:element>
-  </xs:schema>
-
-  <NewDataSet xmlns="http://tempuri.org/data.xsd">
-
-    <deck nbCartes="68" couleur="blue" auteur="Aamond">
-      <carte>
-        <img>000001.jpg</img>
-        <nom>Gohei oublié</nom>
-        <masterType>Artefact</masterType>
-        <legendaire>0</legendaire>
-        <nbOccurences>2</nbOccurences>
-      </carte>
-      <carte>
-        <img>000025.jpg</img>
-        <nom>Fileur de vie</nom>
-        <masterType>Créature</masterType>
-        <legendaire>0</legendaire>
-        <nbOccurences>2</nbOccurences>
-      </carte>
-      <carte>
-        <img>000002.jpg</img>
-        <nom>Kami Hana</nom>
-        <masterType>Créature</masterType>
-        <legendaire>0</legendaire>
-        <nbOccurences>3</nbOccurences>
-      </carte>
-      <carte>
-        <img>000003.jpg</img>
-        <nom>Ancêtre de la tribu Sakura</nom>
-        <masterType>Créature</masterType>
-        <legendaire>0</legendaire>
-        <nbOccurences>2</nbOccurences>
-      </carte>
-      <carte>
-        <img>000004.jpg</img>
-        <nom>Zubera à la langue baveuse</nom>
-        <masterType>Créature</masterType>
-        <nbOccurences>4</nbOccurences>
-      </carte>
-      <carte>
-        <img>000005.jpg</img>
-        <nom>Zubera à la peau cendreuse</nom>
-        <masterType>Créature</masterType>
-        <legendaire>0</legendaire>
-        <nbOccurences>4</nbOccurences>
-      </carte>
-      <carte>
-        <img>000006.jpg</img>
-        <nom>Zubera au chant silencieux</nom>
-        <masterType>Créature</masterType>
-        <legendaire>0</legendaire>
-        <nbOccurences>4</nbOccurences>
-      </carte>
-      <carte>
-        <img>000007.jpg</img>
-        <nom>Zubera au poings de braise</nom>
-        <masterType>Créature</masterType>
-        <legendaire>0</legendaire>
-        <nbOccurences>4</nbOccurences>
-      </carte>
-      <carte>
-        <img>000008.jpg</img>
-        <nom>Zubera aux rêves flottants</nom>
-        <masterType>Créature</masterType>
-        <legendaire>0</legendaire>
-        <nbOccurences>4</nbOccurences>
-      </carte>
-      <carte>
-        <img>000009.jpg</img>
-        <nom>Rage dévorante</nom>
-        <masterType>Éphémère</masterType>
-        <legendaire>0</legendaire>
-        <nbOccurences>3</nbOccurences>
-      </carte>
-      <carte>
-        <img>000010.jpg</img>
-        <nom>Réanimation sans âme</nom>
-        <masterType>Éphémère</masterType>
-        <legendaire>0</legendaire>
-        <nbOccurences>2</nbOccurences>
-      </carte>
-      <carte>
-        <img>000011.jpg</img>
-        <nom>Sonder les brumes</nom>
-        <masterType>Éphémère</masterType>
-        <legendaire>0</legendaire>
-        <nbOccurences>2</nbOccurences>
-      </carte>
-      <carte>
-        <img>000012.jpg</img>
-        <nom>Noyau de Mirrodin</nom>
-        <masterType>Terrain</masterType>
-        <legendaire>0</legendaire>
-        <nbOccurences>3</nbOccurences>
-      </carte>
-      <carte>
-        <img>000013.jpg</img>
-        <nom>Immensité terramorphe</nom>
-        <masterType>Terrain</masterType>
-        <legendaire>0</legendaire>
-        <nbOccurences>3</nbOccurences>
-      </carte>
-      <carte>
-        <img>000014.jpg</img>
-        <nom>Sekki, le guide des saisons</nom>
-        <masterType>Créature</masterType>
-        <legendaire>1</legendaire>
-        <nbOccurences>1</nbOccurences>
-      </carte>
-      <carte>
-        <img>000015.jpg</img>
-        <nom>Shirei, pourvoyeur de Shizo</nom>
-        <masterType>Créature</masterType>
-        <legendaire>1</legendaire>
-        <nbOccurences>2</nbOccurences>
-      </carte>
-      <carte>
-        <img>000016.jpg</img>
-        <nom>Marée solaire</nom>
-        <masterType>Rituel</masterType>
-        <legendaire>0</legendaire>
-        <nbOccurences>2</nbOccurences>
-      </carte>
-      <carte>
-        <img>000017.jpg</img>
-        <nom>Avidité dévorante</nom>
-        <masterType>Rituel</masterType>
-        <legendaire>0</legendaire>
-        <nbOccurences>3</nbOccurences>
-      </carte>
-      <carte>
-        <img>000018.jpg</img>
-        <nom>Portée du kodama</nom>
-        <masterType>Rituel</masterType>
-        <legendaire>0</legendaire>
-        <nbOccurences>3</nbOccurences>
-      </carte>
-      <carte>
-        <img>000019.jpg</img>
-        <nom>Rubans du Reikai</nom>
-        <masterType>Rituel</masterType>
-        <legendaire>0</legendaire>
-        <nbOccurences>1</nbOccurences>
-      </carte>
-      <carte>
-        <img>000020.jpg</img>
-        <nom>Forêt</nom>
-        <masterType>Terrain de base</masterType>
-        <legendaire>0</legendaire>
-        <nbOccurences>3</nbOccurences>
-      </carte>
-      <carte>
-        <img>000021.jpg</img>
-        <nom>Île</nom>
-        <masterType>Terrain de base</masterType>
-        <legendaire>0</legendaire>
-        <nbOccurences>2</nbOccurences>
-      </carte>
-      <carte>
-        <img>000022.jpg</img>
-        <nom>Marais</nom>
-        <masterType>Terrain de base</masterType>
-        <legendaire>0</legendaire>
-        <nbOccurences>3</nbOccurences>
-      </carte>
-      <carte>
-        <img>000023.jpg</img>
-        <nom>Montagne</nom>
-        <masterType>Terrain de base</masterType>
-        <legendaire>0</legendaire>
-        <nbOccurences>3</nbOccurences>
-      </carte>
-      <carte>
-        <img>000024.jpg</img>
-        <nom>Plaine</nom>
-        <masterType>Terrain de base</masterType>
-        <legendaire>0</legendaire>
-        <nbOccurences>3</nbOccurences>
-      </carte>
-    </deck>
-  </NewDataSet>
-</DataSet>
+<?xml version="1.0"?>
+<Deck xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <NomDeck>Zubera</NomDeck>
+  <AuteurDeck>Aamond</AuteurDeck>
+  <CouleurDeck>Vert</CouleurDeck>
+  <Cartes>
+    <Card>
+      <ID_Carte>000001.jpg</ID_Carte>
+      <Nom_Carte>Gohei oublié</Nom_Carte>
+      <MasterType>Artefact</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000001.jpg</ID_Carte>
+      <Nom_Carte>Gohei oublié</Nom_Carte>
+      <MasterType>Artefact</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000025.jpg</ID_Carte>
+      <Nom_Carte>Fileur de vie</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000025.jpg</ID_Carte>
+      <Nom_Carte>Fileur de vie</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000002.jpg</ID_Carte>
+      <Nom_Carte>Kami Hana</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000002.jpg</ID_Carte>
+      <Nom_Carte>Kami Hana</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000002.jpg</ID_Carte>
+      <Nom_Carte>Kami Hana</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000003.jpg</ID_Carte>
+      <Nom_Carte>Ancêtre de la tribu Sakura</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000003.jpg</ID_Carte>
+      <Nom_Carte>Ancêtre de la tribu Sakura</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000004.jpg</ID_Carte>
+      <Nom_Carte>Zubera à la langue baveuse</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000004.jpg</ID_Carte>
+      <Nom_Carte>Zubera à la langue baveuse</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000004.jpg</ID_Carte>
+      <Nom_Carte>Zubera à la langue baveuse</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000004.jpg</ID_Carte>
+      <Nom_Carte>Zubera à la langue baveuse</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000005.jpg</ID_Carte>
+      <Nom_Carte>Zubera à la peau cendreuse</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000005.jpg</ID_Carte>
+      <Nom_Carte>Zubera à la peau cendreuse</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000005.jpg</ID_Carte>
+      <Nom_Carte>Zubera à la peau cendreuse</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000005.jpg</ID_Carte>
+      <Nom_Carte>Zubera à la peau cendreuse</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000006.jpg</ID_Carte>
+      <Nom_Carte>Zubera au chant silencieux</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000006.jpg</ID_Carte>
+      <Nom_Carte>Zubera au chant silencieux</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000006.jpg</ID_Carte>
+      <Nom_Carte>Zubera au chant silencieux</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000006.jpg</ID_Carte>
+      <Nom_Carte>Zubera au chant silencieux</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000007.jpg</ID_Carte>
+      <Nom_Carte>Zubera aux poings de braise</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000007.jpg</ID_Carte>
+      <Nom_Carte>Zubera aux poings de braise</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000007.jpg</ID_Carte>
+      <Nom_Carte>Zubera aux poings de braise</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000007.jpg</ID_Carte>
+      <Nom_Carte>Zubera aux poings de braise</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000008.jpg</ID_Carte>
+      <Nom_Carte>Zubera aux rêves flottants</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000008.jpg</ID_Carte>
+      <Nom_Carte>Zubera aux rêves flottants</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000008.jpg</ID_Carte>
+      <Nom_Carte>Zubera aux rêves flottants</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000008.jpg</ID_Carte>
+      <Nom_Carte>Zubera aux rêves flottants</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000009.jpg</ID_Carte>
+      <Nom_Carte>Rage dévorante</Nom_Carte>
+      <MasterType>Éphémère</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000009.jpg</ID_Carte>
+      <Nom_Carte>Rage dévorante</Nom_Carte>
+      <MasterType>Éphémère</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000009.jpg</ID_Carte>
+      <Nom_Carte>Rage dévorante</Nom_Carte>
+      <MasterType>Éphémère</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000010.jpg</ID_Carte>
+      <Nom_Carte>Réanimation sans âme</Nom_Carte>
+      <MasterType>Éphémère</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000010.jpg</ID_Carte>
+      <Nom_Carte>Réanimation sans âme</Nom_Carte>
+      <MasterType>Éphémère</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000011.jpg</ID_Carte>
+      <Nom_Carte>Sonder les brumes</Nom_Carte>
+      <MasterType>Éphémère</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000011.jpg</ID_Carte>
+      <Nom_Carte>Sonder les brumes</Nom_Carte>
+      <MasterType>Éphémère</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000012.jpg</ID_Carte>
+      <Nom_Carte>Noyau de Mirrodin</Nom_Carte>
+      <MasterType>Terrain</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000012.jpg</ID_Carte>
+      <Nom_Carte>Noyau de Mirrodin</Nom_Carte>
+      <MasterType>Terrain</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000012.jpg</ID_Carte>
+      <Nom_Carte>Noyau de Mirrodin</Nom_Carte>
+      <MasterType>Terrain</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000013.jpg</ID_Carte>
+      <Nom_Carte>Immensité terramorphe</Nom_Carte>
+      <MasterType>Terrain</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000013.jpg</ID_Carte>
+      <Nom_Carte>Immensité terramorphe</Nom_Carte>
+      <MasterType>Terrain</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000013.jpg</ID_Carte>
+      <Nom_Carte>Immensité terramorphe</Nom_Carte>
+      <MasterType>Terrain</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000014.jpg</ID_Carte>
+      <Nom_Carte>Sekki, le guide des saisons</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>true</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000015.jpg</ID_Carte>
+      <Nom_Carte>Shirei, pourvoyeur de Shizo</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>true</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000015.jpg</ID_Carte>
+      <Nom_Carte>Shirei, pourvoyeur de Shizo</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>true</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000016.jpg</ID_Carte>
+      <Nom_Carte>Marée solaire</Nom_Carte>
+      <MasterType>Rituel</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000016.jpg</ID_Carte>
+      <Nom_Carte>Marée solaire</Nom_Carte>
+      <MasterType>Rituel</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000017.jpg</ID_Carte>
+      <Nom_Carte>Avidité dévorante</Nom_Carte>
+      <MasterType>Rituel</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000017.jpg</ID_Carte>
+      <Nom_Carte>Avidité dévorante</Nom_Carte>
+      <MasterType>Rituel</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000017.jpg</ID_Carte>
+      <Nom_Carte>Avidité dévorante</Nom_Carte>
+      <MasterType>Rituel</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000018.jpg</ID_Carte>
+      <Nom_Carte>Portée du kodama</Nom_Carte>
+      <MasterType>Rituel</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000018.jpg</ID_Carte>
+      <Nom_Carte>Portée du kodama</Nom_Carte>
+      <MasterType>Rituel</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000018.jpg</ID_Carte>
+      <Nom_Carte>Portée du kodama</Nom_Carte>
+      <MasterType>Rituel</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000019.jpg</ID_Carte>
+      <Nom_Carte>Rubans du Reikai</Nom_Carte>
+      <MasterType>Rituel</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000020.jpg</ID_Carte>
+      <Nom_Carte>Forêt</Nom_Carte>
+      <MasterType>Terrain de base</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000020.jpg</ID_Carte>
+      <Nom_Carte>Forêt</Nom_Carte>
+      <MasterType>Terrain de base</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000020.jpg</ID_Carte>
+      <Nom_Carte>Forêt</Nom_Carte>
+      <MasterType>Terrain de base</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000021.jpg</ID_Carte>
+      <Nom_Carte>Île</Nom_Carte>
+      <MasterType>Terrain de base</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000021.jpg</ID_Carte>
+      <Nom_Carte>Île</Nom_Carte>
+      <MasterType>Terrain de base</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000022.jpg</ID_Carte>
+      <Nom_Carte>Marais</Nom_Carte>
+      <MasterType>Terrain de base</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000022.jpg</ID_Carte>
+      <Nom_Carte>Marais</Nom_Carte>
+      <MasterType>Terrain de base</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000022.jpg</ID_Carte>
+      <Nom_Carte>Marais</Nom_Carte>
+      <MasterType>Terrain de base</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000023.jpg</ID_Carte>
+      <Nom_Carte>Montagne</Nom_Carte>
+      <MasterType>Terrain de base</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000023.jpg</ID_Carte>
+      <Nom_Carte>Montagne</Nom_Carte>
+      <MasterType>Terrain de base</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000023.jpg</ID_Carte>
+      <Nom_Carte>Montagne</Nom_Carte>
+      <MasterType>Terrain de base</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000024.jpg</ID_Carte>
+      <Nom_Carte>Plaine</Nom_Carte>
+      <MasterType>Terrain de base</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000024.jpg</ID_Carte>
+      <Nom_Carte>Plaine</Nom_Carte>
+      <MasterType>Terrain de base</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000024.jpg</ID_Carte>
+      <Nom_Carte>Plaine</Nom_Carte>
+      <MasterType>Terrain de base</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+  </Cartes>
+</Deck>
