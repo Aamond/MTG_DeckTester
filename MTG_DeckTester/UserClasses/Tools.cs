@@ -49,7 +49,7 @@ namespace MTG_DeckTester.UserClasses
         /// <param name="message">Message d'avertissement/erreur à afficher</param>
         private void ShowWarning(string message)
         {
-            MessageBox.Show(ex.Message);
+            MessageBox.Show(message);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace MTG_DeckTester.UserClasses
             Deck dTmp = new Deck();
             Random rnd = new Random();
 
-            while(dInstance.Cartes.Count != 0)
+            while (dInstance.Cartes.Count != 0)
             {
                 //On ajoute à notre deck de travail une carte aléatoire du deck à mélanger
                 dTmp.Cartes.Add(dInstance.Cartes[rnd.Next(dInstance.Cartes.Count)]);
@@ -116,6 +116,6 @@ namespace MTG_DeckTester.UserClasses
             dInstance.Cartes.Remove(dInstance.Cartes[0]);
 
             return Carte_Piochee;
-        } 
+        }
     }
 }
