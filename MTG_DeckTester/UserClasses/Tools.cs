@@ -5,14 +5,14 @@ using System.Xml.Serialization;
 
 namespace MTG_DeckTester.UserClasses
 {
-    public class Tools
+    public static class Tools
     {
         /// <summary>
         /// Fonction de gestion des erreurs (Log + Affichage dans une message box)
         /// </summary>
         /// <param name="ex">Erreur relevée</param>
         /// <param name="MethodName">Nom de la méthode en erreur</param>
-        public void ParseError(Exception ex, string MethodName)
+        public static void ParseError(Exception ex, string MethodName)
         {
             try
             {
@@ -47,7 +47,7 @@ namespace MTG_DeckTester.UserClasses
         /// Affiche simplement l'erreur (évolution possible --> créer une fenêtre dédiée et afficher le message dedans)
         /// </summary>
         /// <param name="message">Message d'avertissement/erreur à afficher</param>
-        private void ShowWarning(string message)
+        private static void ShowWarning(string message)
         {
             MessageBox.Show(ex.Message);
         }
@@ -57,7 +57,7 @@ namespace MTG_DeckTester.UserClasses
         /// </summary>
         /// <param name="dInstance">Instance du deck à écrire en XML</param>
         /// <param name="chemin">Chemin du fichier xml à écrire</param>
-        public void WriteDeckXML(Deck dInstance, string chemin)
+        public static void WriteDeckXML(Deck dInstance, string chemin)
         {
             XmlSerializer writer = new XmlSerializer(typeof(Deck));
             using (FileStream file = File.OpenWrite(chemin))
@@ -71,7 +71,7 @@ namespace MTG_DeckTester.UserClasses
         /// </summary>
         /// <param name="chemin">Chemin du fichier XML à lire</param>
         /// <returns>Objet deck rempli selon la lecture du fichier</returns>
-        public Deck ReadDeckXML(string chemin)
+        public static Deck ReadDeckXML(string chemin)
         {
             XmlSerializer reader = new XmlSerializer(typeof(Deck));
             using (FileStream input = File.OpenRead(chemin))
@@ -81,10 +81,38 @@ namespace MTG_DeckTester.UserClasses
         }
 
         /// <summary>
+        /// Fonction d'écriture d'un duel en XML
+        /// </summary>
+        /// <param name="dInstance">Instance du duel à écrire en XML</param>
+        /// <param name="chemin">Chemin du fichier xml à écrire</param>
+        public static void WriteDuelXML(Duel dInstance, string chemin)
+        {
+            XmlSerializer writer = new XmlSerializer(typeof(Duel));
+            using (FileStream file = File.OpenWrite(chemin))
+            {
+                writer.Serialize(file, dInstance);
+            }
+        }
+
+        /// <summary>
+        /// Fonction de lecture d'un fichier XML, retourne l'objet duel rempli associé
+        /// </summary>
+        /// <param name="chemin">Chemin du fichier XML à lire</param>
+        /// <returns>Objet duel rempli selon la lecture du fichier</returns>
+        public static Duel ReadDuelXML(string chemin)
+        {
+            XmlSerializer reader = new XmlSerializer(typeof(Duel));
+            using (FileStream input = File.OpenRead(chemin))
+            {
+                return reader.Deserialize(input) as Duel;
+            }
+        }
+
+        /// <summary>
         /// Fonction de mélange d'un deck
         /// </summary>
         /// <param name="dInstance">Deck à mélanger</param>
-        public void Shuffle(Deck dInstance)
+        public static void Shuffle(Deck dInstance)
         {
             Deck dTmp = new Deck();
             Random rnd = new Random();
@@ -108,7 +136,7 @@ namespace MTG_DeckTester.UserClasses
         /// </summary>
         /// <param name="dInstance">Deck dans lequel on pioche une carte</param>
         /// <returns>Carte piochée</returns>
-        public Card Draw(Deck dInstance)
+        public static Card Draw(Deck dInstance)
         {
             Card Carte_Piochee;
 
@@ -117,5 +145,15 @@ namespace MTG_DeckTester.UserClasses
 
             return Carte_Piochee;
         } 
+
+        /// <summary>
+        /// Fonction d'obtention d'un chemin tiré du App.config
+        /// </summary>
+        /// <param name="key">Clé</param>
+        /// <returns>Chemin associé</returns>
+        public static string GetPath(string key)
+        {
+            return System.Configuration.ConfigurationManager.AppSettings[key];
+        }
     }
 }

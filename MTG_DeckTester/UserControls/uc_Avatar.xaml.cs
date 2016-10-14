@@ -25,14 +25,14 @@ namespace MTG_DeckTester.UserControls
             lbl_hp.Content = hp.ToString();
 
             //Chargement de l'avatar
-            _dossier = "./players/" + Global.CurrentUser_Name;
+            _dossier = System.Configuration.ConfigurationManager.AppSettings["playersDirectory"];
             if (Directory.Exists(_dossier))
             {
                 if (File.Exists(_dossier + "/" + Global.CurrentUser_Name + ".png"))
                 {
                     BitmapImage b = new BitmapImage();
                     b.BeginInit();
-                    b.UriSource = new Uri("pack://application:,,,/players/Aamond.png");
+                    b.UriSource = new Uri(_dossier + "/" + Global.CurrentUser_Name + ".png");
                     b.EndInit();
                     img_avatar.Source = b;
                 }
@@ -47,36 +47,36 @@ namespace MTG_DeckTester.UserControls
             }
 
             //Chargement de la couleur du deck                
-            _uri = "img/deck_colors/";
+            _dossier = System.Configuration.ConfigurationManager.AppSettings["deckColorsDirectory"];
             switch (deck_color)
             {
                 //Incolore
                 case "uncolor":
-                    img_deck_color.Source = new BitmapImage(new Uri(_uri + deck_color + ".png", UriKind.Relative));
+                    img_deck_color.Source = new BitmapImage(new Uri(_dossier + deck_color + ".png", UriKind.Relative));
                     break;
                 //Bleu
                 case "blue":
-                    img_deck_color.Source = new BitmapImage(new Uri(_uri + deck_color + ".png", UriKind.Relative));
+                    img_deck_color.Source = new BitmapImage(new Uri(_dossier + deck_color + ".png", UriKind.Relative));
                     break;
                 //Rouge
                 case "red":
-                    img_deck_color.Source = new BitmapImage(new Uri(_uri + deck_color + ".png", UriKind.Relative));
+                    img_deck_color.Source = new BitmapImage(new Uri(_dossier + deck_color + ".png", UriKind.Relative));
                     break;
                 //Vert
                 case "green":
-                    img_deck_color.Source = new BitmapImage(new Uri(_uri + deck_color + ".png", UriKind.Relative));
+                    img_deck_color.Source = new BitmapImage(new Uri(_dossier + deck_color + ".png", UriKind.Relative));
                     break;
                 //Blanc
                 case "white":
-                    img_deck_color.Source = new BitmapImage(new Uri(_uri + deck_color + ".png", UriKind.Relative));
+                    img_deck_color.Source = new BitmapImage(new Uri(_dossier + deck_color + ".png", UriKind.Relative));
                     break;
                 //Noir
                 case "black":
-                    img_deck_color.Source = new BitmapImage(new Uri(_uri + deck_color + ".png", UriKind.Relative));
+                    img_deck_color.Source = new BitmapImage(new Uri(_dossier + deck_color + ".png", UriKind.Relative));
                     break;
                 //Autre cas, on utilise l'incolore
                 default:
-                    img_deck_color.Source = new BitmapImage(new Uri(_uri + "uncolor.png", UriKind.Relative));
+                    img_deck_color.Source = new BitmapImage(new Uri(_dossier + "uncolor.png", UriKind.Relative));
                     break;
             }
         }

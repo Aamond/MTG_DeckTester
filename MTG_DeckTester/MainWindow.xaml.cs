@@ -9,10 +9,7 @@ namespace MTG_DeckTester
     public partial class MainWindow : Window
     {
         public MainWindow()
-        {
-            Global.CurrentUser_IP = "127.0.0.1";
-            Global.CurrentUser_Name = "Aamond";
-
+        {            
             InitializeComponent();
         }
     }
