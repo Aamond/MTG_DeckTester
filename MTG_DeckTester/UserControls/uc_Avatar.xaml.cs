@@ -101,7 +101,7 @@ namespace MTG_DeckTester.UserControls
         /// <param name="e">Evenement Double clic</param>
         private void Change_DeckColor(object sender, MouseButtonEventArgs e)
         {
-            string DeckColor_Path = "img/deck_colors/";
+            string DeckColor_Path = Properties.Settings.Default;
 
             if (deck_color == "uncolor")
             {
