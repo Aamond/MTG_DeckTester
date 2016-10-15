@@ -11,28 +11,77 @@ namespace MTG_DeckTester.UserControls
     public partial class uc_Avatar : UserControl
     {
         public int hp;
-        public string deck_color;
 
+        public string player_name { get; set; }
+        public string deck_color { get; set; }
+
+        /// <summary>
+        /// Constructeur du UserControls
+        /// </summary>
         public uc_Avatar()
         {
-            string _uri;
-            string _dossier;
-
             InitializeComponent();
 
             //Init des Hp (par défaut 20)
             int hp = 20;
-            lbl_hp.Content = hp.ToString();
+            lbl_hp.Content = hp.ToString();            
+        }
 
-            //Chargement de l'avatar
-            _dossier = System.Configuration.ConfigurationManager.AppSettings["playersDirectory"];
-            if (Directory.Exists(_dossier))
+        /// <summary>
+        /// Initialise la couleur du deck (on passe la couleur en paramètre)
+        /// </summary>
+        /// <param name="deckColor">Couleur du deck</param>
+        public void Set_DeckColor(string deckColor)
+        {
+            //Chargement de la couleur du deck
+            switch (deck_color)
             {
-                if (File.Exists(_dossier + "/" + Global.CurrentUser_Name + ".png"))
+                //Incolore
+                case "uncolor":
+                    img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deckColor + ".png", UriKind.RelativeOrAbsolute));
+                    break;
+                //Bleu
+                case "blue":
+                    img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deckColor + ".png", UriKind.RelativeOrAbsolute));
+                    break;
+                //Rouge
+                case "red":
+                    img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deckColor + ".png", UriKind.RelativeOrAbsolute));
+                    break;
+                //Vert
+                case "green":
+                    img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deckColor + ".png", UriKind.RelativeOrAbsolute));
+                    break;
+                //Blanc
+                case "white":
+                    img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deckColor + ".png", UriKind.RelativeOrAbsolute));
+                    break;
+                //Noir
+                case "black":
+                    img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deckColor + ".png", UriKind.RelativeOrAbsolute));
+                    break;
+                //Autre cas, on utilise l'incolore
+                default:
+                    img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + "uncolor.png", UriKind.RelativeOrAbsolute));
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Initialise l'avatar
+        /// </summary>
+        /// <param name="player_name">Nom du joueur</param>
+        public void Set_PlayerName(string player_name)
+        {
+            //Chargement de l'avatar
+            if (Directory.Exists(Tools.GetPath(ConfigKeys.PLAYERS)))
+            {
+                if (File.Exists(Tools.GetPath(ConfigKeys.PLAYERS) + player_name + ".png"))
                 {
+
                     BitmapImage b = new BitmapImage();
                     b.BeginInit();
-                    b.UriSource = new Uri(_dossier + "/" + Global.CurrentUser_Name + ".png");
+                    b.UriSource = new Uri(Tools.GetPath(ConfigKeys.PLAYERS) + player_name + ".png");
                     b.EndInit();
                     img_avatar.Source = b;
                 }
@@ -40,53 +89,39 @@ namespace MTG_DeckTester.UserControls
                 {
                     BitmapImage b = new BitmapImage();
                     b.BeginInit();
-                    b.UriSource = new Uri(_dossier + "default.png");
+                    b.UriSource = new Uri(Tools.GetPath(ConfigKeys.PLAYERS) + "default.png");
                     b.EndInit();
                     img_avatar.Source = b;
                 }
             }
-
-            //Chargement de la couleur du deck                
-            _dossier = System.Configuration.ConfigurationManager.AppSettings["deckColorsDirectory"];
-            switch (deck_color)
-            {
-                //Incolore
-                case "uncolor":
-                    img_deck_color.Source = new BitmapImage(new Uri(_dossier + deck_color + ".png", UriKind.Relative));
-                    break;
-                //Bleu
-                case "blue":
-                    img_deck_color.Source = new BitmapImage(new Uri(_dossier + deck_color + ".png", UriKind.Relative));
-                    break;
-                //Rouge
-                case "red":
-                    img_deck_color.Source = new BitmapImage(new Uri(_dossier + deck_color + ".png", UriKind.Relative));
-                    break;
-                //Vert
-                case "green":
-                    img_deck_color.Source = new BitmapImage(new Uri(_dossier + deck_color + ".png", UriKind.Relative));
-                    break;
-                //Blanc
-                case "white":
-                    img_deck_color.Source = new BitmapImage(new Uri(_dossier + deck_color + ".png", UriKind.Relative));
-                    break;
-                //Noir
-                case "black":
-                    img_deck_color.Source = new BitmapImage(new Uri(_dossier + deck_color + ".png", UriKind.Relative));
-                    break;
-                //Autre cas, on utilise l'incolore
-                default:
-                    img_deck_color.Source = new BitmapImage(new Uri(_dossier + "uncolor.png", UriKind.Relative));
-                    break;
-            }
         }
 
+        /// <summary>
+        /// Change les points de vie
+        /// </summary>
+        /// <param name="hp_Param">Points de vie</param>
+        public void Set_HP(int hp_Param)
+        {
+            int hp = hp_Param;
+            lbl_hp.Content = hp_Param.ToString();
+        }
+
+        /// <summary>
+        /// Décrémente de 1 les PDV
+        /// </summary>
+        /// <param name="sender">Bouton</param>
+        /// <param name="e">Évènement</param>
         private void Hp_Down(object sender, MouseButtonEventArgs e)
         {
             hp--;
             lbl_hp.Content = hp.ToString();
         }
 
+        /// <summary>
+        /// Incrémente de 1 les PDV
+        /// </summary>
+        /// <param name="sender">Bouton</param>
+        /// <param name="e">Évènement</param>
         private void Hp_Up(object sender, MouseButtonEventArgs e)
         {
             hp++;
@@ -101,42 +136,40 @@ namespace MTG_DeckTester.UserControls
         /// <param name="e">Evenement Double clic</param>
         private void Change_DeckColor(object sender, MouseButtonEventArgs e)
         {
-            string DeckColor_Path = Properties.Settings.Default;
-
             if (deck_color == "uncolor")
             {
                 deck_color = "blue";
-                img_deck_color.Source = new BitmapImage(new Uri(DeckColor_Path + deck_color + ".png", UriKind.Relative));
+                img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deck_color + ".png", UriKind.Relative));
             }
 
             if (deck_color == "blue")
             {
                 deck_color = "green";
-                img_deck_color.Source = new BitmapImage(new Uri(DeckColor_Path + deck_color + ".png", UriKind.Relative));
+                img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deck_color + ".png", UriKind.Relative));
             }
 
             if (deck_color == "red")
             {
                 deck_color = "green";
-                img_deck_color.Source = new BitmapImage(new Uri(DeckColor_Path + deck_color + ".png", UriKind.Relative));
+                img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deck_color + ".png", UriKind.Relative));
             }
 
             if (deck_color == "green")
             {
                 deck_color = "white";
-                img_deck_color.Source = new BitmapImage(new Uri(DeckColor_Path + deck_color + ".png", UriKind.Relative));
+                img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deck_color + ".png", UriKind.Relative));
             }
 
             if (deck_color == "white")
             {
                 deck_color = "black";
-                img_deck_color.Source = new BitmapImage(new Uri(DeckColor_Path + deck_color + ".png", UriKind.Relative));
+                img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deck_color + ".png", UriKind.Relative));
             }
 
             if (deck_color == "black")
             {
                 deck_color = "uncolor";
-                img_deck_color.Source = new BitmapImage(new Uri(DeckColor_Path + deck_color + ".png", UriKind.Relative));
+                img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deck_color + ".png", UriKind.Relative));
             }
         }
     }

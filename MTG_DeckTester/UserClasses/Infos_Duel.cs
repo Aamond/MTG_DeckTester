@@ -2,8 +2,11 @@
 
 namespace MTG_DeckTester.UserClasses
 {
+    /// <summary>
+    /// Classe qui sert uniquement à sérialize quelques infos du duel pour de futur duels (sauvegarde nom + ip des joueurs)
+    /// </summary>
     [Serializable()]
-    public class Duel
+    public class Infos_Duel
     {
         public Player Joueur1;
         public Player Joueur2;
@@ -13,11 +16,11 @@ namespace MTG_DeckTester.UserClasses
         /// <summary>
         /// Constructeur par défaut
         /// </summary>
-        public Duel()
+        public Infos_Duel()
         {
             Joueur1 = new Player();
             Joueur2 = new Player();
-            NomFichier = Tools.GetPath("duelsDirectory") + "PARTIE_VIDE";
+            NomFichier = Tools.GetPath(ConfigKeys.DUELS) + "PARTIE_VIDE";
         }
 
         /// <summary>
@@ -25,11 +28,11 @@ namespace MTG_DeckTester.UserClasses
         /// </summary>
         /// <param name="j1">Joueur 1</param>
         /// <param name="j2">Joueur 2</param>
-        public Duel(Player j1, Player j2)
+        public Infos_Duel(Player j1, Player j2)
         {
             Joueur1 = j1;
             Joueur2 = j2;
-            NomFichier = Tools.GetPath("duelsDirectory") + j1.Name + "_VS_" + j2.Name;
+            NomFichier = Tools.GetPath(ConfigKeys.DUELS) + j1.Name + "_VS_" + j2.Name;
         }
     }
 }

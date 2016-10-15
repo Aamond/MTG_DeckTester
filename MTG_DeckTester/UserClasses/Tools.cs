@@ -85,9 +85,9 @@ namespace MTG_DeckTester.UserClasses
         /// </summary>
         /// <param name="dInstance">Instance du duel à écrire en XML</param>
         /// <param name="chemin">Chemin du fichier xml à écrire</param>
-        public static void WriteDuelXML(Duel dInstance, string chemin)
+        public static void WriteInfoDuellXML(Infos_Duel dInstance, string chemin)
         {
-            XmlSerializer writer = new XmlSerializer(typeof(Duel));
+            XmlSerializer writer = new XmlSerializer(typeof(Infos_Duel));
             using (FileStream file = File.OpenWrite(chemin))
             {
                 writer.Serialize(file, dInstance);
@@ -99,12 +99,12 @@ namespace MTG_DeckTester.UserClasses
         /// </summary>
         /// <param name="chemin">Chemin du fichier XML à lire</param>
         /// <returns>Objet duel rempli selon la lecture du fichier</returns>
-        public static Duel ReadDuelXML(string chemin)
+        public static Infos_Duel ReadInfoDuelXML(string chemin)
         {
-            XmlSerializer reader = new XmlSerializer(typeof(Duel));
+            XmlSerializer reader = new XmlSerializer(typeof(Infos_Duel));
             using (FileStream input = File.OpenRead(chemin))
             {
-                return reader.Deserialize(input) as Duel;
+                return reader.Deserialize(input) as Infos_Duel;
             }
         }
 
@@ -144,19 +144,53 @@ namespace MTG_DeckTester.UserClasses
             dInstance.Cartes.Remove(dInstance.Cartes[0]);
 
             return Carte_Piochee;
-<<<<<<< HEAD
-        } 
+        }
 
         /// <summary>
         /// Fonction d'obtention d'un chemin tiré du App.config
         /// </summary>
         /// <param name="key">Clé</param>
         /// <returns>Chemin associé</returns>
-        public static string GetPath(string key)
+        public static string GetPath(ConfigKeys key)
         {
-            return System.Configuration.ConfigurationManager.AppSettings[key];
-=======
->>>>>>> origin/master
+            string res;
+
+            switch (key)
+            {
+                case ConfigKeys.IMG:
+                    res = System.Configuration.ConfigurationManager.AppSettings["imgDirectoryPath"];
+                    break;
+
+                case ConfigKeys.PLAYERS:
+                    res = System.Configuration.ConfigurationManager.AppSettings["playerDirectory"];
+                    break;
+
+                case ConfigKeys.DECK_COLOR:
+                    res = System.Configuration.ConfigurationManager.AppSettings["deckColorsDirectory"];
+                    break;
+
+                case ConfigKeys.DECKS:
+                    res = System.Configuration.ConfigurationManager.AppSettings["decksDirectory"];
+                    break;
+
+                case ConfigKeys.DUELS:
+                    res = System.Configuration.ConfigurationManager.AppSettings["duelsDirectory"];
+                    break;
+
+                case ConfigKeys.CARDS:
+                    res = System.Configuration.ConfigurationManager.AppSettings["cardsDirectory"];
+                    break;
+
+                default:
+                    res = "";
+                    break;
+            }
+
+            return res;
+
         }
     }
+
+    public enum ConfigKeys
+    { IMG = 0, PLAYERS = 1, DECKS = 2, CARDS = 3, DECK_COLOR = 4, DUELS = 5 };
 }

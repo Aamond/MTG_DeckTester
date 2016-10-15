@@ -14,7 +14,6 @@
                 <ColumnDefinition Width="461*"/>
                 <ColumnDefinition Width="75*"/>
             </Grid.ColumnDefinitions>
-            <UserControls:uc_Avatar Grid.Column="0"/>
             <UserControls:uc_Hand Grid.Column="1"/>
             <Button Grid.Column="2" x:Name="btn_EndTurn" Content="Fin de tour" Margin="19,21,19,25" RenderTransformOrigin="-0.533,-1.1" Background="#FF6E6A6A" FontSize="20" FontFamily="Trebuchet MS" FontWeight="Bold" BorderThickness="2"/>
         </Grid>

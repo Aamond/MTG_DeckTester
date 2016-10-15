@@ -28,7 +28,7 @@ namespace MTG_DeckTester.UserControls
                     {
                         if (img is Image && (img as Image).Name == NomImage)
                         {
-                            (img as Image).Source = new BitmapImage(new Uri(Tools.GetPath("cardsDirectory") + MainJoueur[CptCartes].ID_Carte));
+                            (img as Image).Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.CARDS) + MainJoueur[CptCartes].ID_Carte));
                             break;
                         }
                     }
@@ -46,7 +46,7 @@ namespace MTG_DeckTester.UserControls
                     {
                         if (img is Image && (img as Image).Name == NomImage)
                         {
-                            (img as Image).Source = new BitmapImage(new Uri(Tools.GetPath("cardsDirectory") + MainJoueur[CptCartes].ID_Carte));
+                            (img as Image).Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.CARDS) + MainJoueur[CptCartes].ID_Carte));
                             break;
                         }
                     }
