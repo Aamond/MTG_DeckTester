@@ -58,6 +58,8 @@
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -81,12 +83,26 @@
     </Compile>
     <Compile Include="UserClasses\Card.cs" />
     <Compile Include="UserClasses\Deck.cs" />
+    <Compile Include="UserClasses\Exile.cs" />
     <Compile Include="UserClasses\Game.cs" />
+    <Compile Include="UserClasses\Graveyard.cs" />
     <Compile Include="UserClasses\Infos_Duel.cs" />
     <Compile Include="UserClasses\Player.cs" />
     <Compile Include="UserClasses\Tools.cs" />
     <Compile Include="UserControls\uc_Avatar.xaml.cs">
       <DependentUpon>uc_Avatar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\uc_Board_Creatures.xaml.cs">
+      <DependentUpon>uc_Board_Creatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\uc_Board_Deck.xaml.cs">
+      <DependentUpon>uc_Board_Deck.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\uc_Board_Lands.xaml.cs">
+      <DependentUpon>uc_Board_Lands.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\uc_Board_Specials.xaml.cs">
+      <DependentUpon>uc_Board_Specials.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\uc_Hand.xaml.cs">
       <DependentUpon>uc_Hand.xaml</DependentUpon>
@@ -110,6 +126,22 @@
     <Page Include="UserControls\uc_Avatar.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\uc_Board_Creatures.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\uc_Board_Deck.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\uc_Board_Lands.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\uc_Board_Specials.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\uc_Hand.xaml">
       <SubType>Designer</SubType>
