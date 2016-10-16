@@ -10,13 +10,22 @@ namespace MTG_DeckTester.UserControls
     {
         public List<Card> MainJoueur;
 
+        /// <summary>
+        /// Constructeur par défaut
+        /// </summary>
         public uc_Hand()
+        {            
+            InitializeComponent();
+            MainJoueur = new List<Card>();            
+        }
+
+        /// <summary>
+        /// Raffraichis la visu sur la main
+        /// </summary>
+        public void Refresh_Hand()
         {
             int CptCartes;
             string NomImage;
-
-            MainJoueur = new List<Card>();
-            InitializeComponent();
 
             if (MainJoueur.Count < 9)
             {
@@ -52,6 +61,26 @@ namespace MTG_DeckTester.UserControls
                     }
                 }
             }
+        }
+
+        /// <summary>
+        /// Ajoute une carte à la main
+        /// </summary>
+        /// <param name="cInstance">Carte à ajouter</param>
+        public void Add_Card(Card cInstance)
+        {
+            this.MainJoueur.Add(cInstance);
+            Refresh_Hand();
+        }
+
+        /// <summary>
+        /// Affiche la carte en plus grand au survol sur la carte
+        /// </summary>
+        /// <param name="sender">Image survolé</param>
+        /// <param name="e">Évènement</param>
+        private void Show_Card(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            // A CODER
         }
     }
 }

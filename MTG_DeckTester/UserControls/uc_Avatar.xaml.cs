@@ -24,7 +24,7 @@ namespace MTG_DeckTester.UserControls
 
             //Init des Hp (par défaut 20)
             int hp = 20;
-            lbl_hp.Content = hp.ToString();            
+            lbl_hp.Content = hp.ToString();
         }
 
         /// <summary>
@@ -34,30 +34,31 @@ namespace MTG_DeckTester.UserControls
         public void Set_DeckColor(string deckColor)
         {
             //Chargement de la couleur du deck
+            deck_color = deckColor.ToUpper();
             switch (deck_color)
             {
                 //Incolore
-                case "uncolor":
+                case "UNCOLOR":
                     img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deckColor + ".png", UriKind.RelativeOrAbsolute));
                     break;
                 //Bleu
-                case "blue":
+                case "BLUE":
                     img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deckColor + ".png", UriKind.RelativeOrAbsolute));
                     break;
                 //Rouge
-                case "red":
+                case "RED":
                     img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deckColor + ".png", UriKind.RelativeOrAbsolute));
                     break;
                 //Vert
-                case "green":
+                case "GREEN":
                     img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deckColor + ".png", UriKind.RelativeOrAbsolute));
                     break;
                 //Blanc
-                case "white":
+                case "WHITE":
                     img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deckColor + ".png", UriKind.RelativeOrAbsolute));
                     break;
                 //Noir
-                case "black":
+                case "BLACK":
                     img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deckColor + ".png", UriKind.RelativeOrAbsolute));
                     break;
                 //Autre cas, on utilise l'incolore
@@ -71,27 +72,18 @@ namespace MTG_DeckTester.UserControls
         /// Initialise l'avatar
         /// </summary>
         /// <param name="player_name">Nom du joueur</param>
-        public void Set_PlayerName(string player_name)
+        public void Set_Avatar(string player_name)
         {
             //Chargement de l'avatar
             if (Directory.Exists(Tools.GetPath(ConfigKeys.PLAYERS)))
             {
-                if (File.Exists(Tools.GetPath(ConfigKeys.PLAYERS) + player_name + ".png"))
+                if (File.Exists(Tools.GetPath(ConfigKeys.PLAYERS) + player_name + "\\" + player_name + ".png"))
                 {
-
-                    BitmapImage b = new BitmapImage();
-                    b.BeginInit();
-                    b.UriSource = new Uri(Tools.GetPath(ConfigKeys.PLAYERS) + player_name + ".png");
-                    b.EndInit();
-                    img_avatar.Source = b;
+                    img_avatar.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.PLAYERS) + player_name + "\\" + player_name + ".png", UriKind.RelativeOrAbsolute));
                 }
                 else
                 {
-                    BitmapImage b = new BitmapImage();
-                    b.BeginInit();
-                    b.UriSource = new Uri(Tools.GetPath(ConfigKeys.PLAYERS) + "default.png");
-                    b.EndInit();
-                    img_avatar.Source = b;
+                    img_avatar.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.PLAYERS) + player_name + "\\" + "default.png", UriKind.RelativeOrAbsolute));
                 }
             }
         }
@@ -136,40 +128,48 @@ namespace MTG_DeckTester.UserControls
         /// <param name="e">Evenement Double clic</param>
         private void Change_DeckColor(object sender, MouseButtonEventArgs e)
         {
-            if (deck_color == "uncolor")
+            bool exit = false;
+
+            if (deck_color == "UNCOLOR" && !exit)
             {
-                deck_color = "blue";
-                img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deck_color + ".png", UriKind.Relative));
+                deck_color = "BLUE";
+                img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deck_color + ".png", UriKind.RelativeOrAbsolute));
+                exit = true;
             }
 
-            if (deck_color == "blue")
+            if (deck_color == "BLUE" && !exit)
             {
-                deck_color = "green";
-                img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deck_color + ".png", UriKind.Relative));
+                deck_color = "GREEN";
+                img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deck_color + ".png", UriKind.RelativeOrAbsolute));
+                exit = true;
             }
 
-            if (deck_color == "red")
+            if (deck_color == "GREEN" && !exit)
             {
-                deck_color = "green";
-                img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deck_color + ".png", UriKind.Relative));
+                deck_color = "RED";
+                img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deck_color + ".png", UriKind.RelativeOrAbsolute));
+                exit = true;
             }
 
-            if (deck_color == "green")
+            if (deck_color == "RED" && !exit)
             {
-                deck_color = "white";
-                img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deck_color + ".png", UriKind.Relative));
+                deck_color = "WHITE";
+                img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deck_color + ".png", UriKind.RelativeOrAbsolute));
+                exit = true;
             }
 
-            if (deck_color == "white")
+            if (deck_color == "WHITE" && !exit)
             {
-                deck_color = "black";
-                img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deck_color + ".png", UriKind.Relative));
+                deck_color = "BLACK";
+                img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deck_color + ".png", UriKind.RelativeOrAbsolute));
+                exit = true;
             }
 
-            if (deck_color == "black")
+            if (deck_color == "BLACK" && !exit)
             {
-                deck_color = "uncolor";
-                img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deck_color + ".png", UriKind.Relative));
+                deck_color = "UNCOLOR";
+                img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deck_color + ".png", UriKind.RelativeOrAbsolute));
+                exit = true;
             }
         }
     }

@@ -2,7 +2,7 @@
 <Deck xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <NomDeck>Zubera</NomDeck>
   <AuteurDeck>Aamond</AuteurDeck>
-  <CouleurDeck>Vert</CouleurDeck>
+  <CouleurDeck>green</CouleurDeck>
   <Cartes>
     <Card>
       <ID_Carte>000001.jpg</ID_Carte>

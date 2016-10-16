@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MTG_DeckTester"
         mc:Ignorable="d"
-        Title="Connexion" Height="500" Width="300">
+        Title="Connexion" Height="700" Width="300">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
@@ -30,17 +32,21 @@
         <Border Grid.Row="3" BorderBrush="Black" BorderThickness="1" />
         <Label Grid.Row="4" x:Name="lblDeckJoueur" Content="Votre Deck" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Background="#FFB4BDBD"/>
         <Border Grid.Row="4" BorderBrush="Black" BorderThickness="1" />
-        <ListBox Grid.Row="5" x:Name="listBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <ListBox Grid.Row="5" x:Name="lstDeckJoueur" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
         <Border Grid.Row="5" BorderBrush="Black" BorderThickness="1" />
-        <Label Grid.Row="6" x:Name="lblNomAdv" Content="Votre pseudo" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Background="#FFB4BDBD"/>
+        <Label Grid.Row="6" x:Name="lblNomAdv" Content="Pseudo de l'adversaire" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Background="#FFB4BDBD"/>
         <Border Grid.Row="6" BorderBrush="Black" BorderThickness="1" />
         <TextBox Grid.Row="7" x:Name="txtNomAdv" HorizontalContentAlignment="Left" Text="" VerticalContentAlignment="Center" TextWrapping="Wrap"/>
         <Border Grid.Row="7" BorderBrush="Black" BorderThickness="1" />
-        <Label Grid.Row="8" x:Name="lblIpAdv" Content="Votre IP" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Background="#FFB4BDBD"/>
+        <Label Grid.Row="8" x:Name="lblIpAdv" Content="IP de l'adversaire" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Background="#FFB4BDBD"/>
         <Border Grid.Row="8" BorderBrush="Black" BorderThickness="1" />
         <TextBox Grid.Row="9" x:Name="txtIpAdvr" HorizontalContentAlignment="Left" Text="" VerticalContentAlignment="Center" TextWrapping="Wrap"/>
         <Border Grid.Row="9" BorderBrush="Black" BorderThickness="1" />
-        <Button Grid.Row="11" x:Name="button" Content="Lancer la partie" Height="46" VerticalAlignment="Bottom"/>
-        <Border Grid.Row="11" BorderBrush="Black" BorderThickness="1" MouseLeftButtonUp="StartGame" />
+        <Label Grid.Row="10" x:Name="lblDeckAdv" Content="Deck de l'adversaire Deck" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Background="#FFB4BDBD"/>
+        <Border Grid.Row="10" BorderBrush="Black" BorderThickness="1" />
+        <ListBox Grid.Row="11" x:Name="lstDeckAdv" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <Border Grid.Row="11" BorderBrush="Black" BorderThickness="1" />
+        <Button Grid.Row="12" x:Name="btn_StartGame" Content="Lancer la partie" Height="51" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Border Grid.Row="12" BorderBrush="Black" BorderThickness="1" MouseLeftButtonUp="StartGame" />
     </Grid>
 </Window>

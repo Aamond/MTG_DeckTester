@@ -8,14 +8,16 @@
         mc:Ignorable="d"
         Title="Magic The Gathering - DeckTester (Powered by Aamond)" Height="700" Width="1280" MinWidth="1280" MinHeight="700">
     <Grid>
-        <Grid Height="100" VerticalAlignment="Bottom">
+        <Grid Height="125" VerticalAlignment="Bottom" MinHeight="125">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="100*"/>
                 <ColumnDefinition Width="461*"/>
                 <ColumnDefinition Width="75*"/>
             </Grid.ColumnDefinitions>
-            <UserControls:uc_Hand Grid.Column="1"/>
-            <Button Grid.Column="2" x:Name="btn_EndTurn" Content="Fin de tour" Margin="19,21,19,25" RenderTransformOrigin="-0.533,-1.1" Background="#FF6E6A6A" FontSize="20" FontFamily="Trebuchet MS" FontWeight="Bold" BorderThickness="2"/>
+            <UserControls:uc_Avatar x:Name="J1_Avatar" Grid.Column="0" Margin="10"/>
+            <UserControls:uc_Hand x:Name="J1_Hand" Grid.Column="1" Margin="10" MaxWidth="900" />
+            <Button Grid.Column="2" x:Name="btn_EndTurn" Content="Fin de tour" Margin="10" RenderTransformOrigin="-0.533,-1.1" Background="#FF6E6A6A" FontSize="20" FontFamily="Trebuchet MS" FontWeight="Bold" BorderThickness="2"/>
+            <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="3"/>
         </Grid>
     </Grid>
 </Window>
