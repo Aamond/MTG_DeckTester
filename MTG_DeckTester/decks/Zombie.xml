@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Deck xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <NomDeck>Zombie</NomDeck>
+  <AuteurDeck>Ralgamaziel</AuteurDeck>
+  <CouleurDeck>black</CouleurDeck>
+  <Cartes>
+    <Card>
+      <ID_Carte>000001.jpg</ID_Carte>
+      <Nom_Carte>Gohei oublié</Nom_Carte>
+      <MasterType>Artefact</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>    
+  </Cartes>
+</Deck>
