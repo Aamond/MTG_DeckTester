@@ -1,0 +1,404 @@
+<?xml version="1.0"?>
+<Deck xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <NomDeck>Léonins_Equipements</NomDeck>
+  <AuteurDeck>Memnarck</AuteurDeck>
+  <CouleurDeck>white</CouleurDeck>
+  <Cartes>
+    <Card>
+      <ID_Carte>000026.jpg</ID_Carte>
+      <Nom_Carte>Épée de corps et d'esprit</Nom_Carte>
+      <MasterType>Artefact</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000027.jpg</ID_Carte>
+      <Nom_Carte>Épée de Festin et de Famine</Nom_Carte>
+      <MasterType>Artefact</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000028.jpg</ID_Carte>
+      <Nom_Carte>Épée de guerre et de paix</Nom_Carte>
+      <MasterType>Artefact</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000031.jpg</ID_Carte>
+      <Nom_Carte>Épée d'Eau et de Feu</Nom_Carte>
+      <MasterType>Artefact</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000032.jpg</ID_Carte>
+      <Nom_Carte>Épée des Ténèbres et de la Lumière</Nom_Carte>
+      <MasterType>Artefact</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000029.jpg</ID_Carte>
+      <Nom_Carte>Armure d'Argentum</Nom_Carte>
+      <MasterType>Artefact</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000029.jpg</ID_Carte>
+      <Nom_Carte>Armure d'Argentum</Nom_Carte>
+      <MasterType>Artefact</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000030.jpg</ID_Carte>
+      <Nom_Carte>Collier de basilic</Nom_Carte>
+      <MasterType>Artefact</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000030.jpg</ID_Carte>
+      <Nom_Carte>Collier de basilic</Nom_Carte>
+      <MasterType>Artefact</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000035.jpg</ID_Carte>
+      <Nom_Carte>Bolas léonins</Nom_Carte>
+      <MasterType>Artefact</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000035.jpg</ID_Carte>
+      <Nom_Carte>Bolas léonins</Nom_Carte>
+      <MasterType>Artefact</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000036.jpg</ID_Carte>
+      <Nom_Carte>Talaria</Nom_Carte>
+      <MasterType>Artefact</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000036.jpg</ID_Carte>
+      <Nom_Carte>Talaria</Nom_Carte>
+      <MasterType>Artefact</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000033.jpg</ID_Carte>
+      <Nom_Carte>Bottes de piedagile</Nom_Carte>
+      <MasterType>Artefact</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000033.jpg</ID_Carte>
+      <Nom_Carte>Bottes de piedagile</Nom_Carte>
+      <MasterType>Artefact</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000034.jpg</ID_Carte>
+      <Nom_Carte>Armure de guivre cendrée</Nom_Carte>
+      <MasterType>Artefact</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000037.jpg</ID_Carte>
+      <Nom_Carte>Ancienne tannière</Nom_Carte>
+      <MasterType>Terrain</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000037.jpg</ID_Carte>
+      <Nom_Carte>Ancienne tannière</Nom_Carte>
+      <MasterType>Terrain</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000037.jpg</ID_Carte>
+      <Nom_Carte>Ancienne tannière</Nom_Carte>
+      <MasterType>Terrain</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000037.jpg</ID_Carte>
+      <Nom_Carte>Ancienne tannière</Nom_Carte>
+      <MasterType>Terrain</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000038.jpg</ID_Carte>
+      <Nom_Carte>Citadelle de Sombracier</Nom_Carte>
+      <MasterType>Terrain</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000038.jpg</ID_Carte>
+      <Nom_Carte>Citadelle de Sombracier</Nom_Carte>
+      <MasterType>Terrain</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000038.jpg</ID_Carte>
+      <Nom_Carte>Citadelle de Sombracier</Nom_Carte>
+      <MasterType>Terrain</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000038.jpg</ID_Carte>
+      <Nom_Carte>Citadelle de Sombracier</Nom_Carte>
+      <MasterType>Terrain</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000039.jpg</ID_Carte>
+      <Nom_Carte>Châtieur loxodon</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000039.jpg</ID_Carte>
+      <Nom_Carte>Châtieur loxodon</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000040.jpg</ID_Carte>
+      <Nom_Carte>Chercheur de reliques</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000040.jpg</ID_Carte>
+      <Nom_Carte>Chercheur de reliques</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000041.jpg</ID_Carte>
+      <Nom_Carte>Équipeuse du Refuge de pierre</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000041.jpg</ID_Carte>
+      <Nom_Carte>Équipeuse du Refuge de pierre</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000042.jpg</ID_Carte>
+      <Nom_Carte>Forge-acier auriok</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000042.jpg</ID_Carte>
+      <Nom_Carte>Forge-acier auriok</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000043.jpg</ID_Carte>
+      <Nom_Carte>Mystique forgepierre</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000043.jpg</ID_Carte>
+      <Nom_Carte>Mystique forgepierre</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000044.jpg</ID_Carte>
+      <Nom_Carte>Paladin de puracier</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000044.jpg</ID_Carte>
+      <Nom_Carte>Paladin de puracier</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000044.jpg</ID_Carte>
+      <Nom_Carte>Paladin de puracier</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000044.jpg</ID_Carte>
+      <Nom_Carte>Paladin de puracier</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000045.jpg</ID_Carte>
+      <Nom_Carte>Chasseciel léonin</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000045.jpg</ID_Carte>
+      <Nom_Carte>Chasseciel léonin</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000045.jpg</ID_Carte>
+      <Nom_Carte>Chasseciel léonin</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000045.jpg</ID_Carte>
+      <Nom_Carte>Chasseciel léonin</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000046.jpg</ID_Carte>
+      <Nom_Carte>Shikari lancesoleil</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000046.jpg</ID_Carte>
+      <Nom_Carte>Shikari lancesoleil</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000047.jpg</ID_Carte>
+      <Nom_Carte>Expédier</Nom_Carte>
+      <MasterType>Éphémère</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000047.jpg</ID_Carte>
+      <Nom_Carte>Expédier</Nom_Carte>
+      <MasterType>Éphémère</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000047.jpg</ID_Carte>
+      <Nom_Carte>Expédier</Nom_Carte>
+      <MasterType>Éphémère</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000047.jpg</ID_Carte>
+      <Nom_Carte>Expédier</Nom_Carte>
+      <MasterType>Éphémère</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000048.jpg</ID_Carte>
+      <Nom_Carte>Prononcer la justice</Nom_Carte>
+      <MasterType>Éphémère</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000048.jpg</ID_Carte>
+      <Nom_Carte>Prononcer la justice</Nom_Carte>
+      <MasterType>Éphémère</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000049.jpg</ID_Carte>
+      <Nom_Carte>Don du ciel</Nom_Carte>
+      <MasterType>Artefact</MasterType>
+      <EstLegendaire>true</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000050.jpg</ID_Carte>
+      <Nom_Carte>Épée de l'animiste</Nom_Carte>
+      <MasterType>Artefact</MasterType>
+      <EstLegendaire>true</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000051.jpg</ID_Carte>
+      <Nom_Carte>Brimaz, roi d'Oreskos</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>true</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000052.jpg</ID_Carte>
+      <Nom_Carte>Kemba, kha régente</Nom_Carte>
+      <MasterType>Créature</MasterType>
+      <EstLegendaire>true</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000053.jpg</ID_Carte>
+      <Nom_Carte>Don du forge-acier</Nom_Carte>
+      <MasterType>Rituel</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000053.jpg</ID_Carte>
+      <Nom_Carte>Don du forge-acier</Nom_Carte>
+      <MasterType>Rituel</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+	<Card>
+      <ID_Carte>000024.jpg</ID_Carte>
+      <Nom_Carte>Plaine</Nom_Carte>
+      <MasterType>Terrain de base</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000024.jpg</ID_Carte>
+      <Nom_Carte>Plaine</Nom_Carte>
+      <MasterType>Terrain de base</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000024.jpg</ID_Carte>
+      <Nom_Carte>Plaine</Nom_Carte>
+      <MasterType>Terrain de base</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000024.jpg</ID_Carte>
+      <Nom_Carte>Plaine</Nom_Carte>
+      <MasterType>Terrain de base</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000024.jpg</ID_Carte>
+      <Nom_Carte>Plaine</Nom_Carte>
+      <MasterType>Terrain de base</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000024.jpg</ID_Carte>
+      <Nom_Carte>Plaine</Nom_Carte>
+      <MasterType>Terrain de base</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000024.jpg</ID_Carte>
+      <Nom_Carte>Plaine</Nom_Carte>
+      <MasterType>Terrain de base</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000024.jpg</ID_Carte>
+      <Nom_Carte>Plaine</Nom_Carte>
+      <MasterType>Terrain de base</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000024.jpg</ID_Carte>
+      <Nom_Carte>Plaine</Nom_Carte>
+      <MasterType>Terrain de base</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>
+    <Card>
+      <ID_Carte>000024.jpg</ID_Carte>
+      <Nom_Carte>Plaine</Nom_Carte>
+      <MasterType>Terrain de base</MasterType>
+      <EstLegendaire>false</EstLegendaire>
+    </Card>    
+  </Cartes>
+</Deck>
