@@ -103,7 +103,7 @@ namespace MTG_DeckTester.UserControls
         /// </summary>
         /// <param name="sender">Bouton</param>
         /// <param name="e">Évènement</param>
-        private void Hp_Down(object sender, MouseButtonEventArgs e)
+        public void Hp_Down(object sender, MouseButtonEventArgs e)
         {
             hp--;
             lbl_hp.Content = hp.ToString();
@@ -114,7 +114,7 @@ namespace MTG_DeckTester.UserControls
         /// </summary>
         /// <param name="sender">Bouton</param>
         /// <param name="e">Évènement</param>
-        private void Hp_Up(object sender, MouseButtonEventArgs e)
+        public void Hp_Up(object sender, MouseButtonEventArgs e)
         {
             hp++;
             lbl_hp.Content = hp.ToString();

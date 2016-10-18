@@ -6,18 +6,45 @@
         xmlns:local="clr-namespace:MTG_DeckTester"
         xmlns:UserControls="clr-namespace:MTG_DeckTester.UserControls" x:Class="MTG_DeckTester.MainWindow"
         mc:Ignorable="d"
-        Title="Magic The Gathering - DeckTester (Powered by Aamond)" Height="700" Width="1280" MinWidth="1280" MinHeight="700">
-    <Grid>
-        <Grid Height="125" VerticalAlignment="Bottom" MinHeight="125">
+        Title="Magic The Gathering - DeckTester (Powered by Aamond)" Height="1080" Width="1920" MinWidth="1280" MinHeight="700" WindowStartupLocation="CenterScreen">
+    <Grid x:Name="PLATEAU">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <!-- PARTIE DE L'ADVERSAIRE -->
+        <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="100*"/>
-                <ColumnDefinition Width="461*"/>
-                <ColumnDefinition Width="75*"/>
+                <ColumnDefinition Width="460*"/>
+                <ColumnDefinition Width="100*"/>
+            </Grid.ColumnDefinitions>
+            <UserControls:uc_Avatar x:Name="J2_Avatar" Grid.Column="0" Margin="10"/>
+            <UserControls:uc_Hand x:Name="J2_Hand" Grid.Column="1" Margin="10" MaxWidth="900" />
+            <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="3"/>
+        </Grid>
+        <UserControls:uc_Board_Lands Grid.Row="1" x:Name="J2_Lands" />
+        <UserControls:uc_Board_Creatures Grid.Row="2" x:Name="J2_Creatures"/>        
+        <UserControls:uc_Board_Specials Grid.Row="3" x:Name="J2_Specials"/>
+        <!-- PARTIE DU JOUEUR -->
+        <UserControls:uc_Board_Specials Grid.Row="4" x:Name="J1_Specials"/>
+        <UserControls:uc_Board_Creatures Grid.Row="5" x:Name="J1_Creatures"/>
+        <UserControls:uc_Board_Lands Grid.Row="6" x:Name="J1_Lands" />
+        <Grid Grid.Row="7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="460*"/>
+                <ColumnDefinition Width="100*"/>
             </Grid.ColumnDefinitions>
             <UserControls:uc_Avatar x:Name="J1_Avatar" Grid.Column="0" Margin="10"/>
             <UserControls:uc_Hand x:Name="J1_Hand" Grid.Column="1" Margin="10" MaxWidth="900" />
-            <Button Grid.Column="2" x:Name="btn_EndTurn" Content="Fin de tour" Margin="10" RenderTransformOrigin="-0.533,-1.1" Background="#FF6E6A6A" FontSize="20" FontFamily="Trebuchet MS" FontWeight="Bold" BorderThickness="2"/>
-            <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="3"/>
+            <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="3"/>
         </Grid>
     </Grid>
 </Window>

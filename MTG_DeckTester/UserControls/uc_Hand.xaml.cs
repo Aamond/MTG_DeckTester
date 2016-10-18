@@ -22,7 +22,7 @@ namespace MTG_DeckTester.UserControls
         /// <summary>
         /// Raffraichis la visu sur la main
         /// </summary>
-        public void Refresh_Hand()
+        private void Refresh()
         {
             int CptCartes;
             string NomImage;
@@ -33,7 +33,7 @@ namespace MTG_DeckTester.UserControls
                 {
                     NomImage = "img_card_" + CptCartes;
 
-                    foreach (var img in Grid_Principale.Children)
+                    foreach (var img in MainGrid_Hand.Children)
                     {
                         if (img is Image && (img as Image).Name == NomImage)
                         {
@@ -51,7 +51,7 @@ namespace MTG_DeckTester.UserControls
                     NomImage = "img_card_" + CptCartes;
                     NomImage = "img_card_" + CptCartes;
 
-                    foreach (var img in Grid_Principale.Children)
+                    foreach (var img in MainGrid_Hand.Children)
                     {
                         if (img is Image && (img as Image).Name == NomImage)
                         {
@@ -70,7 +70,7 @@ namespace MTG_DeckTester.UserControls
         public void Add_Card(Card cInstance)
         {
             this.MainJoueur.Add(cInstance);
-            Refresh_Hand();
+            Refresh();
         }
 
         /// <summary>

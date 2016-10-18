@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace MTG_DeckTester.UserClasses
 {
-    class Exile
+    public class Exile
     {
+        public List<Card> Exile_Joueur;
+
+        /// <summary>
+        /// Constructeur par défaut
+        /// </summary>
+        public Exile()
+        {
+            Exile_Joueur = new List<Card>();
+        }
     }
 }

@@ -132,7 +132,7 @@ namespace MTG_DeckTester.UserClasses
 
         /// <summary>
         /// Fonction de pioche
-        /// (On pioche la première, qu'on supprime du deck)
+        /// (On pioche la première, la carte à l'indice 0, qu'on supprime du deck)
         /// </summary>
         /// <param name="dInstance">Deck dans lequel on pioche une carte</param>
         /// <returns>Carte piochée</returns>

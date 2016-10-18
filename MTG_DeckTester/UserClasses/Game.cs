@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MTG_DeckTester.UserClasses
+﻿namespace MTG_DeckTester.UserClasses
 {
     public class Game
     {
@@ -20,7 +14,6 @@ namespace MTG_DeckTester.UserClasses
         /// </summary>
         private Game()
         {
-            Joueur_1 = new Player();
             Joueur_2 = new Player();
             Deck_Joueur_1 = new Deck();
             Deck_Joueur_2 = new Deck();
