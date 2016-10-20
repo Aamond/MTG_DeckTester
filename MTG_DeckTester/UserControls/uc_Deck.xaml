@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="MTG_DeckTester.UserControls.uc_Board_Deck"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MTG_DeckTester.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" Width="604.202">
+    <Grid x:Name="MainGrid_Deck">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="10*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="10*" />
+        </Grid.ColumnDefinitions>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="0"/>
+        <Grid x:Name="grid_deck" Grid.Column="0" Margin="5" Background="Transparent">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="Lbl_Deck" Grid.Row="0" Content="DECK" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" FontFamily="Arial" FontSize="12" FontWeight="Bold" />
+            <Image x:Name="img_deck_card" Grid.Row="1"/>
+            <Label x:Name="Lbl_deck_event" Grid.Row="1" Background="Transparent">
+                <Label.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Piocher une carte"/>
+                        <MenuItem Header="Chercher une carte"/>
+                    </ContextMenu>
+                </Label.ContextMenu>
+                <Label.ToolTip>
+                    <ToolTip>
+                        <TextBlock>Il reste 53 cartes</TextBlock>
+                    </ToolTip>
+                </Label.ToolTip>
+            </Label>
+        </Grid>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="2"/>
+        <Grid x:Name="grid_graveyard" Grid.Column="2" Margin="5" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="Lbl_Graveyard" Grid.Row="0" Content="CIMETIÈRE" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" FontFamily="Arial" FontSize="12" FontWeight="Bold" />
+            <Image x:Name="img_graveyard_card" Grid.Row="1"/>
+        </Grid>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="4"/>
+        <Grid x:Name="grid_exile" Grid.Column="4" Margin="5" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="Lbl_Exile" Grid.Row="0" Content="EXIL" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" FontFamily="Arial" FontSize="12" FontWeight="Bold" />
+            <Image x:Name="img_exile_card" Grid.Row="1"/>
+        </Grid>
+    </Grid>
+</UserControl>

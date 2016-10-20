@@ -96,8 +96,8 @@
     <Compile Include="UserControls\uc_Board_Creatures.xaml.cs">
       <DependentUpon>uc_Board_Creatures.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\uc_Board_Deck.xaml.cs">
-      <DependentUpon>uc_Board_Deck.xaml</DependentUpon>
+    <Compile Include="UserControls\uc_Deck.xaml.cs">
+      <DependentUpon>uc_Deck.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\uc_Board_Lands.xaml.cs">
       <DependentUpon>uc_Board_Lands.xaml</DependentUpon>
@@ -132,7 +132,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\uc_Board_Deck.xaml">
+    <Page Include="UserControls\uc_Deck.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
