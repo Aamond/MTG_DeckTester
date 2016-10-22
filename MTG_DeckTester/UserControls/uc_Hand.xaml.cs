@@ -9,14 +9,15 @@ namespace MTG_DeckTester.UserControls
     public partial class uc_Hand : UserControl
     {
         public List<Card> MainJoueur;
+        public int ID_Joueur {get; set;}
 
         /// <summary>
         /// Constructeur par défaut
         /// </summary>
         public uc_Hand()
-        {            
+        {
             InitializeComponent();
-            MainJoueur = new List<Card>();            
+            MainJoueur = new List<Card>();
         }
 
         /// <summary>
@@ -37,11 +38,18 @@ namespace MTG_DeckTester.UserControls
                     {
                         if (img is Image && (img as Image).Name == NomImage)
                         {
-                            (img as Image).Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.CARDS) + MainJoueur[CptCartes].ID_Carte));
-                            break;
+                            if (ID_Joueur == 1)
+                            {
+                                (img as Image).Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.CARDS) + MainJoueur[CptCartes].ID_Carte));
+                                break;
+                            }
+                            else if (ID_Joueur == 2)
+                            {
+                                (img as Image).Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.CARDS) + "000000.jpg"));
+                                break;
+                            }
                         }
                     }
-
                 }
             }
             else
@@ -55,8 +63,16 @@ namespace MTG_DeckTester.UserControls
                     {
                         if (img is Image && (img as Image).Name == NomImage)
                         {
-                            (img as Image).Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.CARDS) + MainJoueur[CptCartes].ID_Carte));
-                            break;
+                            if (ID_Joueur == 1)
+                            {
+                                (img as Image).Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.CARDS) + MainJoueur[CptCartes].ID_Carte));
+                                break;
+                            }
+                            else if (ID_Joueur == 2)
+                            {
+                                (img as Image).Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.CARDS) + "000000.jpg"));
+                                break;
+                            }
                         }
                     }
                 }
@@ -69,18 +85,13 @@ namespace MTG_DeckTester.UserControls
         /// <param name="cInstance">Carte à ajouter</param>
         public void Add_Card(Card cInstance)
         {
-            this.MainJoueur.Add(cInstance);
+            MainJoueur.Add(cInstance);
             Refresh();
         }
 
-        /// <summary>
-        /// Affiche la carte en plus grand au survol sur la carte
-        /// </summary>
-        /// <param name="sender">Image survolé</param>
-        /// <param name="e">Évènement</param>
-        private void Show_Card(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void Show_Card(object sender, System.Windows.Input.MouseEventArgs e)
         {
-            // A CODER
+            
         }
     }
 }

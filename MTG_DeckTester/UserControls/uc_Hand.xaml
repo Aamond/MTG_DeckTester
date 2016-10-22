@@ -20,7 +20,7 @@
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
         <Image Grid.Column="0" x:Name="img_card_0"/>
-        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="0"/>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="0" MouseEnter="Show_Card"/>
         <Image Grid.Column="1" x:Name="img_card_1"/>
         <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1"/>
         <Image Grid.Column="2" x:Name="img_card_2"/>

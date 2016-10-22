@@ -7,7 +7,7 @@
         xmlns:UserControls="clr-namespace:MTG_DeckTester.UserControls" x:Class="MTG_DeckTester.MainWindow"
         mc:Ignorable="d"
         Title="Magic The Gathering - DeckTester (Powered by Aamond)" Height="1080" Width="1920" MinWidth="1280" MinHeight="700" WindowStartupLocation="CenterScreen">
-    <Grid x:Name="PLATEAU">        
+    <Grid x:Name="PLATEAU">
         <Grid.RowDefinitions>
             <RowDefinition Height="5*"/>
             <RowDefinition Height="5*"/>
@@ -34,7 +34,7 @@
         <UserControls:uc_Board_Lands Grid.Row="1" x:Name="J2_Lands" HorizontalAlignment="Center" Width="1800"/>
         <UserControls:uc_Board_Creatures Grid.Row="2" x:Name="J2_Creatures" HorizontalAlignment="Center" Width="1800"/>
         <UserControls:uc_Board_Specials Grid.Row="3" x:Name="J2_Specials" HorizontalAlignment="Center" Width="1800"/>
-        
+
         <!-- SÉPARATION ENTRE LES DEUX TERRAINS -->
         <Label x:Name="SEPARATION" Grid.Row="4" Background="Gray" />
 
@@ -53,5 +53,6 @@
             <UserControls:uc_Board_Deck x:Name="J1_DeckLists" Grid.Column="2" Margin="0,10,30,10" MaxWidth="300" HorizontalAlignment="Right" Width="539" />
             <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="3"/>
         </Grid>
+        <UserControls:uc_VisionneuseCarte x:Name="Visionneuse" Height="450" Width="350"/>
     </Grid>
 </Window>

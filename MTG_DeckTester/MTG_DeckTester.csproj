@@ -90,6 +90,7 @@
     <Compile Include="UserClasses\Land_Card.cs" />
     <Compile Include="UserClasses\Player.cs" />
     <Compile Include="UserClasses\Tools.cs" />
+    <Compile Include="UserClasses\Visionneuse.cs" />
     <Compile Include="UserControls\uc_Avatar.xaml.cs">
       <DependentUpon>uc_Avatar.xaml</DependentUpon>
     </Compile>
@@ -107,6 +108,9 @@
     </Compile>
     <Compile Include="UserControls\uc_Hand.xaml.cs">
       <DependentUpon>uc_Hand.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\uc_VisionneuseCarte.xaml.cs">
+      <DependentUpon>uc_VisionneuseCarte.xaml</DependentUpon>
     </Compile>
     <Page Include="Connexion.xaml">
       <SubType>Designer</SubType>
@@ -145,6 +149,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\uc_Hand.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\uc_VisionneuseCarte.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
