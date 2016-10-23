@@ -11,6 +11,8 @@ namespace MTG_DeckTester.UserControls
         public List<Card> MainJoueur;
         public int ID_Joueur {get; set;}
 
+        private uc_VisionneuseCarte ViewerCard;
+
         /// <summary>
         /// Constructeur par défaut
         /// </summary>
@@ -89,9 +91,16 @@ namespace MTG_DeckTester.UserControls
             Refresh();
         }
 
+        /// <summary>
+        /// Au survol d'une image, envoie la carte 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Show_Card(object sender, System.Windows.Input.MouseEventArgs e)
-        {
-            
+        {            
+            ViewerCard = new uc_VisionneuseCarte((sender as Image));
+            ViewerCard.img_card = (sender as Image);
+            ViewerCard.Visibility = System.Windows.Visibility.Visible;
         }
     }
 }

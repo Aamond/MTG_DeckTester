@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:MTG_DeckTester.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="400">
-    <Grid>
-        <Image x:Name="img_card" Margin="20"/>
+    <Grid x:Name="grid_viewer">
+        <Image x:Name="img_card" Margin="10,10,10,10"/>
     </Grid>
 </UserControl>

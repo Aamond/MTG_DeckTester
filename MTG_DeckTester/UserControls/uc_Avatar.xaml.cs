@@ -74,6 +74,8 @@ namespace MTG_DeckTester.UserControls
         /// <param name="player_name">Nom du joueur</param>
         public void Set_Avatar(string player_name)
         {
+            lbl_Pseudo.Content = player_name;
+
             //Chargement de l'avatar
             if (Directory.Exists(Tools.GetPath(ConfigKeys.PLAYERS)))
             {
@@ -94,30 +96,8 @@ namespace MTG_DeckTester.UserControls
         /// <param name="hp_Param">Points de vie</param>
         public void Set_HP(int hp_Param)
         {
-            int hp = hp_Param;
+            hp = hp_Param;
             lbl_hp.Content = hp_Param.ToString();
-        }
-
-        /// <summary>
-        /// Décrémente de 1 les PDV
-        /// </summary>
-        /// <param name="sender">Bouton</param>
-        /// <param name="e">Évènement</param>
-        public void Hp_Down(object sender, MouseButtonEventArgs e)
-        {
-            hp--;
-            lbl_hp.Content = hp.ToString();
-        }
-
-        /// <summary>
-        /// Incrémente de 1 les PDV
-        /// </summary>
-        /// <param name="sender">Bouton</param>
-        /// <param name="e">Évènement</param>
-        public void Hp_Up(object sender, MouseButtonEventArgs e)
-        {
-            hp++;
-            lbl_hp.Content = hp.ToString();
         }
 
         /// <summary>
@@ -171,6 +151,28 @@ namespace MTG_DeckTester.UserControls
                 img_deck_color.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.DECK_COLOR) + deck_color + ".png", UriKind.RelativeOrAbsolute));
                 exit = true;
             }
+        }
+
+        /// <summary>
+        /// Incrémente de 1 les PDV
+        /// </summary>
+        /// <param name="sender">Bouton</param>
+        /// <param name="e">Évènement</param>
+        private void HpUp(object sender, System.Windows.RoutedEventArgs e)
+        {
+            hp++;
+            lbl_hp.Content = hp.ToString();
+        }
+
+        /// <summary>
+        /// Décrémente de 1 les PDV
+        /// </summary>
+        /// <param name="sender">Bouton</param>
+        /// <param name="e">Évènement</param>
+        private void HpDown(object sender, System.Windows.RoutedEventArgs e)
+        {
+            hp--;
+            lbl_hp.Content = hp.ToString();
         }
     }
 }

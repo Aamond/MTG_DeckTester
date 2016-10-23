@@ -146,6 +146,11 @@ namespace MTG_DeckTester.UserClasses
             return Carte_Piochee;
         }
 
+        public static DrawFromDeck()
+        {
+
+        }
+
         /// <summary>
         /// Fonction d'obtention d'un chemin tiré du App.config
         /// </summary>

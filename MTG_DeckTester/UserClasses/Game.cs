@@ -1,32 +1,39 @@
-﻿namespace MTG_DeckTester.UserClasses
+﻿using System.Collections.Generic;
+
+namespace MTG_DeckTester.UserClasses
 {
     public class Game
     {
         private static Game instance;
 
         private Player Joueur_1 { get; set; }
+        private List<Card> J1_Main { get; set; }
+        private Deck J1_Deck { get; set; }
+        private Graveyard J1_Cimetiere { get; set; }
+        private Exile J1_Exil { get; set; }
+
         private Player Joueur_2 { get; set; }
-        private Deck Deck_Joueur_1 { get; set; }
-        private Deck Deck_Joueur_2 { get; set; }
+        private List<Card> J2_Main { get; set; }
+        private Deck J2_Deck { get; set; }        
+        private Graveyard J2_Cimetiere { get; set; }        
+        private Exile J2_Exil { get; set; }
 
         /// <summary>
         /// Constructeur d'une partie (privé car Singleton)
         /// </summary>
         private Game()
         {
-            Joueur_2 = new Player();
-            Deck_Joueur_1 = new Deck();
-            Deck_Joueur_2 = new Deck();
+            Joueur_1 = new Player();
+            J1_Main = new List<UserClasses.Card>();
+            J1_Deck = new Deck();
+            J1_Cimetiere = new UserClasses.Graveyard();
+
         }
 
         /// <summary>
-        /// Créer ou retourne l'instance d'une partie (Singleton)
+        /// GetInstance de l'objet Game
         /// </summary>
-        /// <param name="J1">Joueur 1</param>
-        /// <param name="J2">Joueur 2</param>
-        /// <param name="deck_J1">Deck du joueur 1</param>
-        /// <param name="deck_J2">Deck du joueur 2</param>
-        /// <returns></returns>
+        /// <returns>L'objet Game</returns>
         public static Game GetInstance()
         {
             if (instance == null)

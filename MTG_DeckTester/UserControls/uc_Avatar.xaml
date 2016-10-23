@@ -4,29 +4,43 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MTG_DeckTester.UserControls"
-             mc:Ignorable="d" d:DesignWidth="150" Height="100">
+             mc:Ignorable="d" d:DesignWidth="200" Height="100">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*" />
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
-        <Image Grid.Column="0" x:Name="img_avatar"/>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="4*" />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" x:Name="lbl_Pseudo" Content="" Background="White" FontSize="7" FontWeight="Bold" BorderBrush="Black" BorderThickness="1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" />
+            <Image Grid.Row="1" x:Name="img_avatar"/>
+        </Grid>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*" />
                 <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
-            <Label Grid.Row="0" x:Name="lbl_hp" IsEnabled="False" Content="20" Background="White" FontSize="32" FontWeight="Bold"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="Black" BorderThickness="1" />
-            <Grid x:Name="Grid_Buttons">
+            <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="3*" />
                     <ColumnDefinition Width="1*" />
                 </Grid.ColumnDefinitions>
-                <Button x:Name="btn_hp_left" Grid.Column="0" MouseLeftButtonDown="Hp_Down" Background="{x:Null}" BorderBrush="Transparent" />
-                <Button x:Name="btn_hp_right" Grid.Column="1" MouseLeftButtonDown="Hp_Up" Background="{x:Null}" BorderBrush="Transparent"/>
+                <Label Grid.Column="0" x:Name="lbl_hp" IsEnabled="false" Content="20" Background="White" FontSize="28" FontWeight="Bold" BorderBrush="Black" BorderThickness="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <Button x:Name="btn_UpHp" Grid.Row="0" Content="+" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" BorderThickness="1" Click="HpUp" />
+                    <Button x:Name="btn_DownHp" Grid.Row="1" Content="-" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" BorderThickness="1" Click="HpDown" />
+                </Grid>
             </Grid>
             <Image Grid.Row="1" x:Name="img_deck_color"  RenderTransformOrigin="1,1" />
             <Button Grid.Row="1" x:Name="btn_deck_color" Content="" Opacity="0" MouseDoubleClick="Change_DeckColor" />
+            <Border BorderBrush="Black" BorderThickness="1" Grid.Row="1"/>
         </Grid>
         <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="2"/>
     </Grid>

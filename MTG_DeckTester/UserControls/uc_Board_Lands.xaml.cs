@@ -39,16 +39,22 @@ namespace MTG_DeckTester.UserControls
                 }
 
                 //Réinit des labels de nombre + remise à transparent des fond
-                if (tmp is Label)
+                if (tmp is Grid)
                 {
-                    (tmp as Label).Content = "";
-                    (tmp as Label).Background = new SolidColorBrush(Colors.Transparent);
-                    
-                    if((tmp as Label).Name.Contains("NbLands"))
+                    foreach (var tmp_2 in (tmp as Grid).Children)
                     {
-                        (tmp as Label).Visibility = Visibility.Collapsed;
+                        if (tmp_2 is Label)
+                        {
+                            (tmp_2 as Label).Content = "";
+                            (tmp_2 as Label).Background = new SolidColorBrush(Colors.Transparent);
+
+                            if ((tmp_2 as Label).Name.Contains("NbLands"))
+                            {
+                                (tmp_2 as Label).Visibility = Visibility.Collapsed;
+                            }
+                        }
                     }
-                }
+                }                
             }
         }
 

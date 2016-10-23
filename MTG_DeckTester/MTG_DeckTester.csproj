@@ -90,7 +90,6 @@
     <Compile Include="UserClasses\Land_Card.cs" />
     <Compile Include="UserClasses\Player.cs" />
     <Compile Include="UserClasses\Tools.cs" />
-    <Compile Include="UserClasses\Visionneuse.cs" />
     <Compile Include="UserControls\uc_Avatar.xaml.cs">
       <DependentUpon>uc_Avatar.xaml</DependentUpon>
     </Compile>

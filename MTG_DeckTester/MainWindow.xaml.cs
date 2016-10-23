@@ -1,5 +1,4 @@
 ﻿using MTG_DeckTester.UserClasses;
-using System.Collections.Generic;
 using System.Windows;
 
 namespace MTG_DeckTester
@@ -13,7 +12,7 @@ namespace MTG_DeckTester
         {            
             InitializeComponent();
             WindowState = WindowState.Maximized;
-
+            
             Game CurrentGame = Game.GetInstance();
 
             // ---------------------------- Initialisation de la partie ----------------------------
