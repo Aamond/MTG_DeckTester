@@ -83,9 +83,7 @@
     </Compile>
     <Compile Include="UserClasses\Card.cs" />
     <Compile Include="UserClasses\Deck.cs" />
-    <Compile Include="UserClasses\Exile.cs" />
     <Compile Include="UserClasses\Game.cs" />
-    <Compile Include="UserClasses\Graveyard.cs" />
     <Compile Include="UserClasses\Infos_Duel.cs" />
     <Compile Include="UserClasses\Land_Card.cs" />
     <Compile Include="UserClasses\Player.cs" />

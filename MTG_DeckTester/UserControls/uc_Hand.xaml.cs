@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media.Imaging;
 
 namespace MTG_DeckTester.UserControls
@@ -29,6 +30,29 @@ namespace MTG_DeckTester.UserControls
         {
             int CptCartes;
             string NomImage;
+
+            //Réinit des images
+            for (CptCartes = 0; CptCartes < MainJoueur.Count; CptCartes++)
+            {
+                NomImage = "img_card_" + CptCartes;
+
+                foreach (var img in MainGrid_Hand.Children)
+                {
+                    if (img is Image && (img as Image).Name == NomImage)
+                    {
+                        if (ID_Joueur == 1)
+                        {
+                            (img as Image).Source = new BitmapImage();
+                            break;
+                        }
+                        else if (ID_Joueur == 2)
+                        {
+                            (img as Image).Source = new BitmapImage();
+                            break;
+                        }
+                    }
+                }
+            }
 
             if (MainJoueur.Count < 9)
             {
@@ -96,11 +120,63 @@ namespace MTG_DeckTester.UserControls
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Show_Card(object sender, System.Windows.Input.MouseEventArgs e)
+        private void Show_Card(object sender, MouseEventArgs e)
         {            
             ViewerCard = new uc_VisionneuseCarte((sender as Image));
             ViewerCard.img_card = (sender as Image);
             ViewerCard.Visibility = System.Windows.Visibility.Visible;
         }
+
+        /// <summary>
+        /// Fonction de jeu d'une carte
+        /// </summary>
+        /// <param name="sender">Image</param>
+        /// <param name="e">Evenement</param>
+        private void PlayCard(object sender, MouseButtonEventArgs e)
+        {
+            int indice_image;
+            MasterType Type;
+
+            //Si double-clic sur la carte
+            if (e.ChangedButton == MouseButton.Left && e.ClickCount == 2 && (sender as Image).Source != null)
+            {
+                indice_image = int.Parse((sender as Image).Name.Substring(9, 1));
+                Type = Tools.GetMasterType(MainJoueur[indice_image].MasterType);
+
+                switch (Type)
+                {
+                    case MasterType.TERRAIN:
+                        
+                        MainJoueur.Remove(MainJoueur[indice_image]);
+                        Refresh();
+                        break;
+
+                    case MasterType.CREATURE:
+
+                        MainJoueur.Remove(MainJoueur[indice_image]);
+                        Refresh();
+                        break;
+
+                    case MasterType.ARTEFACT:
+                    case MasterType.ENCHANTEMENT:
+
+                        MainJoueur.Remove(MainJoueur[indice_image]);
+                        Refresh();
+                        break;
+
+                    case MasterType.EPHEMERE:
+                    case MasterType.RITUEL:
+
+                        MainJoueur.Remove(MainJoueur[indice_image]);
+                        Refresh();
+                        break;
+
+                    case MasterType.UNDEFINED:
+                        break;
+                }                                
+            }
+        }
+
+   
     }
 }

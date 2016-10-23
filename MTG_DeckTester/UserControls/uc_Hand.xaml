@@ -19,23 +19,23 @@
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
-        <Image Grid.Column="0" x:Name="img_card_0"/>
-        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="0" MouseEnter="Show_Card"/>
-        <Image Grid.Column="1" x:Name="img_card_1"/>
+        <Image Grid.Column="0" x:Name="img_card_0" MouseEnter="Show_Card" MouseDown="PlayCard"/>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="0"/>
+        <Image Grid.Column="1" x:Name="img_card_1" MouseEnter="Show_Card" MouseDown="PlayCard"/>
         <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1"/>
-        <Image Grid.Column="2" x:Name="img_card_2"/>
+        <Image Grid.Column="2" x:Name="img_card_2" MouseEnter="Show_Card" MouseDown="PlayCard"/>
         <Border BorderBrush="Black" BorderThickness="1" Grid.Column="2"/>
-        <Image Grid.Column="3" x:Name="img_card_3"/>
+        <Image Grid.Column="3" x:Name="img_card_3" MouseEnter="Show_Card" MouseDown="PlayCard"/>
         <Border BorderBrush="Black" BorderThickness="1" Grid.Column="3"/>
-        <Image Grid.Column="4" x:Name="img_card_4"/>
+        <Image Grid.Column="4" x:Name="img_card_4" MouseEnter="Show_Card" MouseDown="PlayCard"/>
         <Border BorderBrush="Black" BorderThickness="1" Grid.Column="4"/>
-        <Image Grid.Column="5" x:Name="img_card_5"/>
+        <Image Grid.Column="5" x:Name="img_card_5" MouseEnter="Show_Card" MouseDown="PlayCard"/>
         <Border BorderBrush="Black" BorderThickness="1" Grid.Column="5"/>
-        <Image Grid.Column="6" x:Name="img_card_6"/>
+        <Image Grid.Column="6" x:Name="img_card_6" MouseEnter="Show_Card" MouseDown="PlayCard"/>
         <Border BorderBrush="Black" BorderThickness="1" Grid.Column="6"/>
-        <Image Grid.Column="7" x:Name="img_card_7"/>
+        <Image Grid.Column="7" x:Name="img_card_7" MouseEnter="Show_Card" MouseDown="PlayCard"/>
         <Border BorderBrush="Black" BorderThickness="1" Grid.Column="7"/>
-        <Image Grid.Column="8" x:Name="img_card_8"/>
+        <Image Grid.Column="8" x:Name="img_card_8" MouseEnter="Show_Card" MouseDown="PlayCard"/>
         <Border BorderBrush="Black" BorderThickness="1" Grid.Column="8"/>
         <Button x:Name="btn_hand_list" Content="+" Grid.Column="9" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <Border BorderBrush="Black" BorderThickness="1" Grid.Column="9"/>

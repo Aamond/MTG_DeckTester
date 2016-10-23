@@ -146,11 +146,6 @@ namespace MTG_DeckTester.UserClasses
             return Carte_Piochee;
         }
 
-        public static DrawFromDeck()
-        {
-
-        }
-
         /// <summary>
         /// Fonction d'obtention d'un chemin tiré du App.config
         /// </summary>
@@ -194,8 +189,57 @@ namespace MTG_DeckTester.UserClasses
             return res;
 
         }
+
+        /// <summary>
+        /// A partir d'une string, retourne le code lié au type de carte
+        /// </summary>
+        /// <param name="type">String à convertir en code</param>
+        /// <returns>Code associé</returns>
+        public static MasterType GetMasterType(string type)
+        {
+            MasterType res;
+
+            switch (type)
+            {
+                case "Terrain":
+                case "Terrain de base":
+                    res = MasterType.TERRAIN;
+                    break;
+
+                case "Créature":
+                case "Creature":
+                    res = MasterType.CREATURE;
+                    break;
+
+                case "Artefact":
+                    res = MasterType.ARTEFACT;
+                    break;
+
+                case "Enchantement":
+                    res = MasterType.ENCHANTEMENT;
+                    break;
+
+                case "Éphémère":
+                case "Ephémère":
+                case "Ephemere":
+                    res = MasterType.EPHEMERE;
+                    break;
+
+                case "Rituel":
+                    res = MasterType.RITUEL;
+                    break;
+
+                default:
+                    res = MasterType.UNDEFINED;
+                    break;
+            }
+            return res;
+        }
     }
 
     public enum ConfigKeys
     { IMG = 0, PLAYERS = 1, DECKS = 2, CARDS = 3, DECK_COLOR = 4, DUELS = 5 };
+
+    public enum MasterType
+    { TERRAIN = 0, CREATURE = 1, ARTEFACT = 2, ENCHANTEMENT = 3, EPHEMERE = 4, RITUEL = 5, UNDEFINED = 9 };
 }

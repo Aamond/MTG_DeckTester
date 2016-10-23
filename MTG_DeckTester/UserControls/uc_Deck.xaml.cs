@@ -21,7 +21,7 @@ namespace MTG_DeckTester.UserControls
 
         private void DrawCard(object sender, System.Windows.RoutedEventArgs e)
         {
-
+            
         }
     }
 }
