@@ -25,7 +25,7 @@
             <Label x:Name="Lbl_deck_event" Grid.Row="1" Background="Transparent">
                 <Label.ContextMenu>
                     <ContextMenu>
-                        <MenuItem Header="Piocher une carte" Click="DrawCard" />
+                        <MenuItem Header="Piocher une carte" />
                         <MenuItem Header="Chercher une carte"/>
                     </ContextMenu>
                 </Label.ContextMenu>

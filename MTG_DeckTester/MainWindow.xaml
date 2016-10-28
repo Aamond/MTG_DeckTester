@@ -37,6 +37,7 @@
 
         <!-- SÉPARATION ENTRE LES DEUX TERRAINS -->
         <Label x:Name="SEPARATION" Grid.Row="4" Background="Gray" />
+        <Image x:Name="img_spellcast" Grid.Row="2" Margin="729,60,825,58" Grid.RowSpan="5"/>
 
         <!-- PARTIE DU JOUEUR -->
         <UserControls:uc_Board_Specials Grid.Row="5" x:Name="J1_Specials" HorizontalAlignment="Center" Width="1800" />

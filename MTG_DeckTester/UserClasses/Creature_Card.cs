@@ -2,25 +2,27 @@
 
 namespace MTG_DeckTester.UserClasses
 {
-    public class Land_Card : Card
+    public class Creature_Card : Card
     {
         public List<Card> AttachedCards;
         public bool IsLinked;
-        public int NbLands_Total;
-        public int NbLands_Tapped;
-        
+        public int Attack;
+        public int Health;
+        public Marqueur Marqueur;
+
         /// <summary>
         /// Constructeur par défaut
         /// </summary>
-        public Land_Card()
+        public Creature_Card()
         {
             AttachedCards = new List<Card>();
             IsLinked = false;
-            NbLands_Total = 1;
-            NbLands_Tapped = 0;
+            Attack = 0;
+            Health = 0;
+            Marqueur = new Marqueur();
         }
-
-        public Land_Card(string id, string nom, string mastertype, bool legendaire)
+        
+        public Creature_Card(string id, string nom, string mastertype, bool legendaire)
         {
             ID_Carte = id;
             Nom_Carte = nom;
@@ -29,8 +31,9 @@ namespace MTG_DeckTester.UserClasses
 
             AttachedCards = new List<Card>();
             IsLinked = false;
-            NbLands_Total = 1;
-            NbLands_Tapped = 0;
+            Attack = 0;
+            Health = 0;
+            Marqueur = new Marqueur();
         }
     }
 }

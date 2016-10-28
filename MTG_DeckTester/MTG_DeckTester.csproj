@@ -82,11 +82,13 @@
       <DependentUpon>Connexion.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserClasses\Card.cs" />
+    <Compile Include="UserClasses\Creature_Card.cs" />
     <Compile Include="UserClasses\Deck.cs" />
     <Compile Include="UserClasses\Game.cs" />
     <Compile Include="UserClasses\Infos_Duel.cs" />
     <Compile Include="UserClasses\Land_Card.cs" />
     <Compile Include="UserClasses\Player.cs" />
+    <Compile Include="UserClasses\Special_Card.cs" />
     <Compile Include="UserClasses\Tools.cs" />
     <Compile Include="UserControls\uc_Avatar.xaml.cs">
       <DependentUpon>uc_Avatar.xaml</DependentUpon>
@@ -105,9 +107,6 @@
     </Compile>
     <Compile Include="UserControls\uc_Hand.xaml.cs">
       <DependentUpon>uc_Hand.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\uc_VisionneuseCarte.xaml.cs">
-      <DependentUpon>uc_VisionneuseCarte.xaml</DependentUpon>
     </Compile>
     <Page Include="Connexion.xaml">
       <SubType>Designer</SubType>
@@ -146,10 +145,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\uc_Hand.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserControls\uc_VisionneuseCarte.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

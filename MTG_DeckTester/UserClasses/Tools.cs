@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows;
 using System.Xml.Serialization;
@@ -7,6 +8,9 @@ namespace MTG_DeckTester.UserClasses
 {
     public static class Tools
     {
+        //Instance de la partie - GLOBALE
+        public static Game CurrentGame = Game.GetInstance();
+
         /// <summary>
         /// Fonction de gestion des erreurs (Log + Affichage dans une message box)
         /// </summary>
@@ -234,6 +238,80 @@ namespace MTG_DeckTester.UserClasses
                     break;
             }
             return res;
+        }
+
+        /// <summary>
+        /// Retourne l'indice de la grille où afficher la carte
+        /// </summary>
+        /// <param name="ListCount">List.Count des cartes de la collection</param>
+        /// <returns>Indice du prochain endroit où afficher la carte</returns>
+        public static int GetNextPlaceCard(int indiceCarte)
+        {
+            switch (indiceCarte)
+            {
+                //7,8,6,9,5,10,4,11,3,12,2,13,1,14,0
+                case 0:
+                    return 7;
+                case 1:
+                    return 8;
+                case 2:
+                    return 6;
+                case 3:
+                    return 9;
+                case 4:
+                    return 5;
+                case 5:
+                    return 10;
+                case 6:
+                    return 4;
+                case 7:
+                    return 11;
+                case 8:
+                    return 3;
+                case 9:
+                    return 12;
+                case 10:
+                    return 2;
+                case 11:
+                    return 13;
+                case 12:
+                    return 1;
+                case 13:
+                    return 14;
+                case 14:
+                    return 0;
+                default:
+                    return -1;
+            }
+        }
+    }
+
+    /// <summary>
+    /// Classe représentant un marqueur sur une carte
+    /// </summary>
+    public class Marqueur
+    {
+        public string MarqueurName { get; set; }
+        public int NbMarqueur { get; set; }
+
+        /// <summary>
+        /// Constructeur par défaut d'un marqueur
+        /// </summary>
+        public Marqueur()
+        {
+            MarqueurName = "";
+            NbMarqueur = 0;
+        }
+
+        /// <summary>
+        /// Constructeur avec paramètres
+        /// </summary>
+        /// <param name="name">Nom du marqueur</param>
+        /// <param name="nb">Nombre de marqueur</param>
+        public Marqueur(string name, int nb)
+        {
+            MarqueurName = name;
+            NbMarqueur = nb;
         }
     }
 
