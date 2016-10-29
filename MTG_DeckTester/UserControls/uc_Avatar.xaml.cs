@@ -74,8 +74,6 @@ namespace MTG_DeckTester.UserControls
         /// <param name="player_name">Nom du joueur</param>
         public void Set_Avatar(string player_name)
         {
-            lbl_Pseudo.Content = player_name;
-
             //Chargement de l'avatar
             if (Directory.Exists(Tools.GetPath(ConfigKeys.PLAYERS)))
             {

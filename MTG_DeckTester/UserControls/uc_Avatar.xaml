@@ -10,14 +10,7 @@
             <ColumnDefinition Width="2*" />
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="1*" />
-                <RowDefinition Height="4*" />
-            </Grid.RowDefinitions>
-            <Label Grid.Row="0" x:Name="lbl_Pseudo" Content="" Background="White" FontSize="7" FontWeight="Bold" BorderBrush="Black" BorderThickness="1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" />
-            <Image Grid.Row="1" x:Name="img_avatar"/>
-        </Grid>
+        <Image Grid.Row="1" x:Name="img_avatar"/>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*" />
