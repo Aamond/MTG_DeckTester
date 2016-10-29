@@ -24,15 +24,17 @@ namespace MTG_DeckTester.UserControls
         {
             int CptCartes;
             string NomImage;
+            string NomImage_Visionneuse;
 
             //Réinit des images
             for (CptCartes = 0; CptCartes < 9; CptCartes++)
             {
                 NomImage = "img_card_" + CptCartes;
+                NomImage_Visionneuse = "img_view_" + CptCartes;
 
                 foreach (var img in MainGrid_Hand.Children)
                 {
-                    if (img is Image && (img as Image).Name == NomImage)
+                    if (img is Image && ((img as Image).Name == NomImage || (img as Image).Name == NomImage_Visionneuse))
                     {
                         (img as Image).Source = new BitmapImage();
                         break;
@@ -199,7 +201,56 @@ namespace MTG_DeckTester.UserControls
 
         private void Show_Card(object sender, System.Windows.Input.MouseEventArgs e)
         {
-            // A voir comment faire - Grosse image au milieu ?
+            int indice_card;
+            string NomImage_Visionneuse;
+
+            //On gère ici uniquement les évènements du joueur 1
+            //Les évènements du joueur 2 seront gérés par le module de communication
+            if (ID_Joueur == 1)
+            {
+                indice_card = Int32.Parse((sender as Image).Name.Substring(9, 1));
+                NomImage_Visionneuse = "img_view_" + indice_card;
+
+                if((sender as Image).Source != new BitmapImage())
+                {
+                    foreach (var img in MainGrid_Hand.Children)
+                    {
+                        if (img is Image && (img as Image).Name == NomImage_Visionneuse)
+                        {
+                            (img as Image).Source = (sender as Image).Source;
+                            (img as Image).Visibility = System.Windows.Visibility.Visible;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void End_Show_Card(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            int indice_card;
+            string NomImage_Visionneuse;
+
+            //On gère ici uniquement les évènements du joueur 1
+            //Les évènements du joueur 2 seront gérés par le module de communication
+            if (ID_Joueur == 1)
+            {
+                indice_card = Int32.Parse((sender as Image).Name.Substring(9, 1));
+                NomImage_Visionneuse = "img_view_" + indice_card;
+
+                if ((sender as Image).Source != new BitmapImage())
+                {
+                    foreach (var img in MainGrid_Hand.Children)
+                    {
+                        if (img is Image && (img as Image).Name == NomImage_Visionneuse)
+                        {
+                            (img as Image).Source = new BitmapImage();
+                            (img as Image).Visibility = System.Windows.Visibility.Collapsed;
+                            break;
+                        }
+                    }
+                }
+            }
         }
 
         /// <summary>
