@@ -25,80 +25,245 @@
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
         <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="15" />
-        <Label x:Name="IsLinked_0" Grid.Column="0" Background="Transparent" Content="" />
-        <Grid x:Name="grid_Card_0" Grid.Column="0" Margin="10" >
-            <Image x:Name="img_land_card_0"/>
-            <Label x:Name="lbl_NbLands_0" BorderBrush="Black" Background="White" BorderThickness="1" Content="" HorizontalContentAlignment="Center" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="35" VerticalAlignment="Bottom" FontSize="15"/>
+        <Image x:Name="img_view_00_J1" Grid.ColumnSpan="3" Height="400" Margin="0,-425,0,-71" VerticalAlignment="Top" Grid.Column="0" HorizontalAlignment="Left" Width="300"/>
+        <Label x:Name="IsLinked_00" Grid.Column="0" Background="Transparent" Content="" />
+        <Grid x:Name="grid_Card_00" Grid.Column="0" Margin="10" >
+            <Image x:Name="img_Land_card_00"/>
+            <Label x:Name="lbl_NbLands_00" BorderBrush="Black" Background="White" BorderThickness="1" Content="" HorizontalContentAlignment="Center" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="35" VerticalAlignment="Bottom" FontSize="15"/>
         </Grid>
-        <Label x:Name="IsLinked_1" Grid.Column="1" Background="Transparent" Content="" />
-        <Grid x:Name="grid_Card_1" Grid.Column="1" Margin="10" >
-            <Image x:Name="img_land_card_1"/>
-            <Label x:Name="lbl_NbLands_1" BorderBrush="Black" Background="White" BorderThickness="1" Content="" HorizontalContentAlignment="Center" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="35" VerticalAlignment="Bottom" FontSize="15"/>
+        <Label x:Name="lbl_img_00_events" Grid.Column="0" Background="Transparent" MouseEnter="Show_Card" MouseLeave="End_Show_Card" >
+            <Label.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Name="menuitem_00_1" Header="Envoyer cette carte dans le deck" Click="SendTo_Deck"/>
+                    <MenuItem Name="menuitem_00_2" Header="Envoyer cette carte dans le cimetière" Click="SendTo_Graveyard" />
+                    <MenuItem Name="menuitem_00_3" Header="Envoyer cette carte dans l'exil" Click="SendTo_Exile"/>
+                </ContextMenu>
+            </Label.ContextMenu>
+        </Label>
+        <Image x:Name="img_view_00_J2" Grid.ColumnSpan="3" Height="400" Margin="0,175,0,-71" VerticalAlignment="Top" Grid.Column="0" HorizontalAlignment="Left" Width="300"/>
+        <Image x:Name="img_view_01_J1" Grid.ColumnSpan="3" Height="400" Margin="-85,-425,0,-71" VerticalAlignment="Top" Grid.Column="1" HorizontalAlignment="Left" Width="300"/>
+        <Label x:Name="IsLinked_01" Grid.Column="1" Background="Transparent" Content="" />
+        <Grid x:Name="grid_Card_01" Grid.Column="1" Margin="10" >
+            <Image x:Name="img_Land_card_01"/>
+            <Label x:Name="lbl_NbLands_01" BorderBrush="Black" Background="White" BorderThickness="1" Content="" HorizontalContentAlignment="Center" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="35" VerticalAlignment="Bottom" FontSize="15"/>
         </Grid>
-        <Label x:Name="IsLinked_2" Grid.Column="2" Background="Transparent" Content="" />
-        <Grid x:Name="grid_Card_2" Grid.Column="2" Margin="10" >
-            <Image x:Name="img_land_card_2"/>
-            <Label x:Name="lbl_NbLands_2" BorderBrush="Black" Background="White" BorderThickness="1" Content="" HorizontalContentAlignment="Center" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="35" VerticalAlignment="Bottom" FontSize="15"/>
+        <Label x:Name="lbl_img_01_events" Grid.Column="1" Background="Transparent" MouseEnter="Show_Card" MouseLeave="End_Show_Card" >
+            <Label.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Name="menuitem_01_1" Header="Envoyer cette carte dans le deck" Click="SendTo_Deck"/>
+                    <MenuItem Name="menuitem_01_2" Header="Envoyer cette carte dans le cimetière" Click="SendTo_Graveyard" />
+                    <MenuItem Name="menuitem_01_3" Header="Envoyer cette carte dans l'exil" Click="SendTo_Exile"/>
+                </ContextMenu>
+            </Label.ContextMenu>
+        </Label>
+        <Image x:Name="img_view_01_J2" Grid.ColumnSpan="3" Height="400" Margin="-85,175,0,-71" VerticalAlignment="Top" Grid.Column="1" HorizontalAlignment="Left" Width="300"/>
+        <Image x:Name="img_view_02_J1" Grid.ColumnSpan="3" Height="400" Margin="-100,-425,0,-71" VerticalAlignment="Top" Grid.Column="2" HorizontalAlignment="Left" Width="300"/>
+        <Label x:Name="IsLinked_02" Grid.Column="2" Background="Transparent" Content="" />
+        <Grid x:Name="grid_Card_02" Grid.Column="2" Margin="10" >
+            <Image x:Name="img_Land_card_02"/>
+            <Label x:Name="lbl_NbLands_02" BorderBrush="Black" Background="White" BorderThickness="1" Content="" HorizontalContentAlignment="Center" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="35" VerticalAlignment="Bottom" FontSize="15"/>
         </Grid>
-        <Label x:Name="IsLinked_3" Grid.Column="3" Background="Transparent" Content="" />
-       <Grid x:Name="grid_Card_3" Grid.Column="3" Margin="10" >
-           <Image x:Name="img_land_card_3"/>
-            <Label x:Name="lbl_NbLands_3" BorderBrush="Black" Background="White" BorderThickness="1" Content="" HorizontalContentAlignment="Center" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="35" VerticalAlignment="Bottom" FontSize="15"/>
+        <Label x:Name="lbl_img_02_events" Grid.Column="2" Background="Transparent" MouseEnter="Show_Card" MouseLeave="End_Show_Card" >
+            <Label.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Name="menuitem_02_1" Header="Envoyer cette carte dans le deck" Click="SendTo_Deck"/>
+                    <MenuItem Name="menuitem_02_2" Header="Envoyer cette carte dans le cimetière" Click="SendTo_Graveyard" />
+                    <MenuItem Name="menuitem_02_3" Header="Envoyer cette carte dans l'exil" Click="SendTo_Exile"/>
+                </ContextMenu>
+            </Label.ContextMenu>
+        </Label>
+        <Image x:Name="img_view_02_J2" Grid.ColumnSpan="3" Height="400" Margin="-100,175,0,-71" VerticalAlignment="Top" Grid.Column="2" HorizontalAlignment="Left" Width="300"/>
+        <Image x:Name="img_view_03_J1" Grid.ColumnSpan="3" Height="400" Margin="-100,-425,0,-71" VerticalAlignment="Top" Grid.Column="3" HorizontalAlignment="Left" Width="300"/>
+        <Label x:Name="IsLinked_03" Grid.Column="3" Background="Transparent" Content="" />
+        <Grid x:Name="grid_Card_03" Grid.Column="3" Margin="10" >
+            <Image x:Name="img_Land_card_03"/>
+            <Label x:Name="lbl_NbLands_03" BorderBrush="Black" Background="White" BorderThickness="1" Content="" HorizontalContentAlignment="Center" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="35" VerticalAlignment="Bottom" FontSize="15"/>
         </Grid>
-        <Label x:Name="IsLinked_4" Grid.Column="4" Background="Transparent" Content="" />
-       <Grid x:Name="grid_Card_4" Grid.Column="4" Margin="10" >
-            <Image x:Name="img_land_card_4"/>
-            <Label x:Name="lbl_NbLands_4" BorderBrush="Black" Background="White" BorderThickness="1" Content="" HorizontalContentAlignment="Center" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="35" VerticalAlignment="Bottom" FontSize="15"/>
+        <Label x:Name="lbl_img_03_events" Grid.Column="3" Background="Transparent" MouseEnter="Show_Card" MouseLeave="End_Show_Card" >
+            <Label.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Name="menuitem_03_1" Header="Envoyer cette carte dans le deck" Click="SendTo_Deck"/>
+                    <MenuItem Name="menuitem_03_2" Header="Envoyer cette carte dans le cimetière" Click="SendTo_Graveyard" />
+                    <MenuItem Name="menuitem_03_3" Header="Envoyer cette carte dans l'exil" Click="SendTo_Exile"/>
+                </ContextMenu>
+            </Label.ContextMenu>
+        </Label>
+        <Image x:Name="img_view_03_J2" Grid.ColumnSpan="3" Height="400" Margin="-100,175,0,-71" VerticalAlignment="Top" Grid.Column="3" HorizontalAlignment="Left" Width="300"/>
+        <Image x:Name="img_view_04_J1" Grid.ColumnSpan="3" Height="400" Margin="-100,-425,0,-71" VerticalAlignment="Top" Grid.Column="4" HorizontalAlignment="Left" Width="300"/>
+        <Label x:Name="IsLinked_04" Grid.Column="4" Background="Transparent" Content="" />
+        <Grid x:Name="grid_Card_04" Grid.Column="4" Margin="10" >
+            <Image x:Name="img_Land_card_04"/>
+            <Label x:Name="lbl_NbLands_04" BorderBrush="Black" Background="White" BorderThickness="1" Content="" HorizontalContentAlignment="Center" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="35" VerticalAlignment="Bottom" FontSize="15"/>
         </Grid>
-        <Label x:Name="IsLinked_5" Grid.Column="5" Background="Transparent" Content="" />
-        <Grid x:Name="grid_Card_5" Grid.Column="5" Margin="10" >
-            <Image x:Name="img_land_card_5"/>
-            <Label x:Name="lbl_NbLands_5" BorderBrush="Black" Background="White" BorderThickness="1" Content="" HorizontalContentAlignment="Center" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="35" VerticalAlignment="Bottom" FontSize="15"/>
+        <Label x:Name="lbl_img_04_events" Grid.Column="4" Background="Transparent" MouseEnter="Show_Card" MouseLeave="End_Show_Card" >
+            <Label.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Name="menuitem_04_1" Header="Envoyer cette carte dans le deck" Click="SendTo_Deck"/>
+                    <MenuItem Name="menuitem_04_2" Header="Envoyer cette carte dans le cimetière" Click="SendTo_Graveyard" />
+                    <MenuItem Name="menuitem_04_3" Header="Envoyer cette carte dans l'exil" Click="SendTo_Exile"/>
+                </ContextMenu>
+            </Label.ContextMenu>
+        </Label>
+        <Image x:Name="img_view_04_J2" Grid.ColumnSpan="3" Height="400" Margin="-100,175,0,-71" VerticalAlignment="Top" Grid.Column="4" HorizontalAlignment="Left" Width="300"/>
+        <Image x:Name="img_view_05_J1" Grid.ColumnSpan="3" Height="400" Margin="-100,-425,0,-71" VerticalAlignment="Top" Grid.Column="5" HorizontalAlignment="Left" Width="300"/>
+        <Label x:Name="IsLinked_05" Grid.Column="5" Background="Transparent" Content="" />
+        <Grid x:Name="grid_Card_05" Grid.Column="5" Margin="10" >
+            <Image x:Name="img_Land_card_05"/>
+            <Label x:Name="lbl_NbLands_05" BorderBrush="Black" Background="White" BorderThickness="1" Content="" HorizontalContentAlignment="Center" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="35" VerticalAlignment="Bottom" FontSize="15"/>
         </Grid>
-        <Label x:Name="IsLinked_6" Grid.Column="6" Background="Transparent" Content="" />
-        <Grid x:Name="grid_Card_6" Grid.Column="6" Margin="10" >
-            <Image x:Name="img_land_card_6"/>
-            <Label x:Name="lbl_NbLands_6" BorderBrush="Black" Background="White" BorderThickness="1" Content="" HorizontalContentAlignment="Center" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="35" VerticalAlignment="Bottom" FontSize="15"/>
+        <Label x:Name="lbl_img_05_events" Grid.Column="5" Background="Transparent" MouseEnter="Show_Card" MouseLeave="End_Show_Card" >
+            <Label.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Name="menuitem_05_1" Header="Envoyer cette carte dans le deck" Click="SendTo_Deck"/>
+                    <MenuItem Name="menuitem_05_2" Header="Envoyer cette carte dans le cimetière" Click="SendTo_Graveyard" />
+                    <MenuItem Name="menuitem_05_3" Header="Envoyer cette carte dans l'exil" Click="SendTo_Exile"/>
+                </ContextMenu>
+            </Label.ContextMenu>
+        </Label>
+        <Image x:Name="img_view_05_J2" Grid.ColumnSpan="3" Height="400" Margin="-100,175,0,-71" VerticalAlignment="Top" Grid.Column="5" HorizontalAlignment="Left" Width="300"/>
+        <Image x:Name="img_view_06_J1" Grid.ColumnSpan="3" Height="400" Margin="-100,-425,0,-71" VerticalAlignment="Top" Grid.Column="6" HorizontalAlignment="Left" Width="300"/>
+        <Label x:Name="IsLinked_06" Grid.Column="6" Background="Transparent" Content="" />
+        <Grid x:Name="grid_Card_06" Grid.Column="6" Margin="10" >
+            <Image x:Name="img_Land_card_06"/>
+            <Label x:Name="lbl_NbLands_06" BorderBrush="Black" Background="White" BorderThickness="1" Content="" HorizontalContentAlignment="Center" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="35" VerticalAlignment="Bottom" FontSize="15"/>
         </Grid>
-        <Label x:Name="IsLinked_7" Grid.Column="7" Background="Transparent" Content="" />
-        <Grid x:Name="grid_Card_7" Grid.Column="7" Margin="10" >
-            <Image x:Name="img_land_card_7"/>
-            <Label x:Name="lbl_NbLands_7" BorderBrush="Black" Background="White" BorderThickness="1" Content="" HorizontalContentAlignment="Center" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="35" VerticalAlignment="Bottom" FontSize="15"/>
+        <Label x:Name="lbl_img_06_events" Grid.Column="6" Background="Transparent" MouseEnter="Show_Card" MouseLeave="End_Show_Card" >
+            <Label.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Name="menuitem_06_1" Header="Envoyer cette carte dans le deck" Click="SendTo_Deck"/>
+                    <MenuItem Name="menuitem_06_2" Header="Envoyer cette carte dans le cimetière" Click="SendTo_Graveyard" />
+                    <MenuItem Name="menuitem_06_3" Header="Envoyer cette carte dans l'exil" Click="SendTo_Exile"/>
+                </ContextMenu>
+            </Label.ContextMenu>
+        </Label>
+        <Image x:Name="img_view_06_J2" Grid.ColumnSpan="3" Height="400" Margin="-100,175,0,-71" VerticalAlignment="Top" Grid.Column="6" HorizontalAlignment="Left" Width="300"/>
+        <Image x:Name="img_view_07_J1" Grid.ColumnSpan="3" Height="400" Margin="-100,-425,0,-71" VerticalAlignment="Top" Grid.Column="7" HorizontalAlignment="Left" Width="300"/>
+        <Label x:Name="IsLinked_07" Grid.Column="7" Background="Transparent" Content="" />
+        <Grid x:Name="grid_Card_07" Grid.Column="7" Margin="10" >
+            <Image x:Name="img_Land_card_07"/>
+            <Label x:Name="lbl_NbLands_07" BorderBrush="Black" Background="White" BorderThickness="1" Content="" HorizontalContentAlignment="Center" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="35" VerticalAlignment="Bottom" FontSize="15"/>
         </Grid>
-        <Label x:Name="IsLinked_8" Grid.Column="8" Background="Transparent" Content="" />
-        <Grid x:Name="grid_Card_8" Grid.Column="8" Margin="10" >
-            <Image x:Name="img_land_card_8"/>
-            <Label x:Name="lbl_NbLands_8" BorderBrush="Black" Background="White" BorderThickness="1" Content="" HorizontalContentAlignment="Center" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="35" VerticalAlignment="Bottom" FontSize="15"/>
+        <Label x:Name="lbl_img_07_events" Grid.Column="7" Background="Transparent" MouseEnter="Show_Card" MouseLeave="End_Show_Card" >
+            <Label.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Name="menuitem_07_1" Header="Envoyer cette carte dans le deck" Click="SendTo_Deck"/>
+                    <MenuItem Name="menuitem_07_2" Header="Envoyer cette carte dans le cimetière" Click="SendTo_Graveyard" />
+                    <MenuItem Name="menuitem_07_3" Header="Envoyer cette carte dans l'exil" Click="SendTo_Exile"/>
+                </ContextMenu>
+            </Label.ContextMenu>
+        </Label>
+        <Image x:Name="img_view_07_J2" Grid.ColumnSpan="3" Height="400" Margin="-100,175,0,-71" VerticalAlignment="Top" Grid.Column="7" HorizontalAlignment="Left" Width="300"/>
+        <Image x:Name="img_view_08_J1" Grid.ColumnSpan="3" Height="400" Margin="-100,-425,0,-71" VerticalAlignment="Top" Grid.Column="8" HorizontalAlignment="Left" Width="300"/>
+        <Label x:Name="IsLinked_08" Grid.Column="8" Background="Transparent" Content="" />
+        <Grid x:Name="grid_Card_08" Grid.Column="8" Margin="10" >
+            <Image x:Name="img_Land_card_08"/>
+            <Label x:Name="lbl_NbLands_08" BorderBrush="Black" Background="White" BorderThickness="1" Content="" HorizontalContentAlignment="Center" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="35" VerticalAlignment="Bottom" FontSize="15"/>
         </Grid>
-        <Label x:Name="IsLinked_9" Grid.Column="9" Background="Transparent" Content="" />
-        <Grid x:Name="grid_Card_9" Grid.Column="9" Margin="10" >
-           <Image x:Name="img_land_card_9"/>
-            <Label x:Name="lbl_NbLands_9" BorderBrush="Black" Background="White" BorderThickness="1" Content="" HorizontalContentAlignment="Center" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="35" VerticalAlignment="Bottom" FontSize="15"/>
+        <Label x:Name="lbl_img_08_events" Grid.Column="8" Background="Transparent" MouseEnter="Show_Card" MouseLeave="End_Show_Card" >
+            <Label.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Name="menuitem_08_1" Header="Envoyer cette carte dans le deck" Click="SendTo_Deck"/>
+                    <MenuItem Name="menuitem_08_2" Header="Envoyer cette carte dans le cimetière" Click="SendTo_Graveyard" />
+                    <MenuItem Name="menuitem_08_3" Header="Envoyer cette carte dans l'exil" Click="SendTo_Exile"/>
+                </ContextMenu>
+            </Label.ContextMenu>
+        </Label>
+        <Image x:Name="img_view_08_J2" Grid.ColumnSpan="3" Height="400" Margin="-100,175,0,-71" VerticalAlignment="Top" Grid.Column="8" HorizontalAlignment="Left" Width="300"/>
+        <Image x:Name="img_view_09_J1" Grid.ColumnSpan="3" Height="400" Margin="-100,-425,0,-71" VerticalAlignment="Top" Grid.Column="9" HorizontalAlignment="Left" Width="300"/>
+        <Label x:Name="IsLinked_09" Grid.Column="9" Background="Transparent" Content="" />
+        <Grid x:Name="grid_Card_09" Grid.Column="9" Margin="10" >
+            <Image x:Name="img_Land_card_09"/>
+            <Label x:Name="lbl_NbLands_09" BorderBrush="Black" Background="White" BorderThickness="1" Content="" HorizontalContentAlignment="Center" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="35" VerticalAlignment="Bottom" FontSize="15"/>
         </Grid>
+        <Label x:Name="lbl_img_09_events" Grid.Column="9" Background="Transparent" MouseEnter="Show_Card" MouseLeave="End_Show_Card" >
+            <Label.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Name="menuitem_09_1" Header="Envoyer cette carte dans le deck" Click="SendTo_Deck"/>
+                    <MenuItem Name="menuitem_09_2" Header="Envoyer cette carte dans le cimetière" Click="SendTo_Graveyard" />
+                    <MenuItem Name="menuitem_09_3" Header="Envoyer cette carte dans l'exil" Click="SendTo_Exile"/>
+                </ContextMenu>
+            </Label.ContextMenu>
+        </Label>
+        <Image x:Name="img_view_09_J2" Grid.ColumnSpan="3" Height="400" Margin="-100,175,0,-71" VerticalAlignment="Top" Grid.Column="9" HorizontalAlignment="Left" Width="300"/>
+        <Image x:Name="img_view_10_J1" Grid.ColumnSpan="3" Height="400" Margin="-100,-425,0,-71" VerticalAlignment="Top" Grid.Column="10" HorizontalAlignment="Left" Width="300"/>
         <Label x:Name="IsLinked_10" Grid.Column="10" Background="Transparent" Content="" />
         <Grid x:Name="grid_Card_10" Grid.Column="10" Margin="10" >
-            <Image x:Name="img_land_card_10"/>
+            <Image x:Name="img_Land_card_10"/>
             <Label x:Name="lbl_NbLands_10" BorderBrush="Black" Background="White" BorderThickness="1" Content="" HorizontalContentAlignment="Center" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="35" VerticalAlignment="Bottom" FontSize="15"/>
         </Grid>
+        <Label x:Name="lbl_img_10_events" Grid.Column="10" Background="Transparent" MouseEnter="Show_Card" MouseLeave="End_Show_Card" >
+            <Label.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Name="menuitem_10_1" Header="Envoyer cette carte dans le deck" Click="SendTo_Deck"/>
+                    <MenuItem Name="menuitem_10_2" Header="Envoyer cette carte dans le cimetière" Click="SendTo_Graveyard" />
+                    <MenuItem Name="menuitem_10_3" Header="Envoyer cette carte dans l'exil" Click="SendTo_Exile"/>
+                </ContextMenu>
+            </Label.ContextMenu>
+        </Label>
+        <Image x:Name="img_view_10_J2" Grid.ColumnSpan="3" Height="400" Margin="-100,175,0,-71" VerticalAlignment="Top" Grid.Column="10" HorizontalAlignment="Left" Width="300"/>
+        <Image x:Name="img_view_11_J1" Grid.ColumnSpan="3" Height="400" Margin="-100,-425,0,-71" VerticalAlignment="Top" Grid.Column="11" HorizontalAlignment="Left" Width="300"/>
         <Label x:Name="IsLinked_11" Grid.Column="11" Background="Transparent" Content="" />
         <Grid x:Name="grid_Card_11" Grid.Column="11" Margin="10" >
-            <Image x:Name="img_land_card_11"/>
+            <Image x:Name="img_Land_card_11"/>
             <Label x:Name="lbl_NbLands_11" BorderBrush="Black" Background="White" BorderThickness="1" Content="" HorizontalContentAlignment="Center" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="35" VerticalAlignment="Bottom" FontSize="15"/>
         </Grid>
+        <Label x:Name="lbl_img_11_events" Grid.Column="11" Background="Transparent" MouseEnter="Show_Card" MouseLeave="End_Show_Card" >
+            <Label.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Name="menuitem_11_1" Header="Envoyer cette carte dans le deck" Click="SendTo_Deck"/>
+                    <MenuItem Name="menuitem_11_2" Header="Envoyer cette carte dans le cimetière" Click="SendTo_Graveyard" />
+                    <MenuItem Name="menuitem_11_3" Header="Envoyer cette carte dans l'exil" Click="SendTo_Exile"/>
+                </ContextMenu>
+            </Label.ContextMenu>
+        </Label>
+        <Image x:Name="img_view_11_J2" Grid.ColumnSpan="3" Height="400" Margin="-100,175,0,-71" VerticalAlignment="Top" Grid.Column="11" HorizontalAlignment="Left" Width="300"/>
+        <Image x:Name="img_view_12_J1" Grid.ColumnSpan="3" Height="400" Margin="-100,-425,0,-71" VerticalAlignment="Top" Grid.Column="12" HorizontalAlignment="Left" Width="300"/>
         <Label x:Name="IsLinked_12" Grid.Column="12" Background="Transparent" Content="" />
         <Grid x:Name="grid_Card_12" Grid.Column="12" Margin="10" >
-            <Image x:Name="img_land_card_12"/>
+            <Image x:Name="img_Land_card_12"/>
             <Label x:Name="lbl_NbLands_12" BorderBrush="Black" Background="White" BorderThickness="1" Content="" HorizontalContentAlignment="Center" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="35" VerticalAlignment="Bottom" FontSize="15"/>
         </Grid>
+        <Label x:Name="lbl_img_12_events" Grid.Column="12" Background="Transparent" MouseEnter="Show_Card" MouseLeave="End_Show_Card" >
+            <Label.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Name="menuitem_12_1" Header="Envoyer cette carte dans le deck" Click="SendTo_Deck"/>
+                    <MenuItem Name="menuitem_12_2" Header="Envoyer cette carte dans le cimetière" Click="SendTo_Graveyard" />
+                    <MenuItem Name="menuitem_12_3" Header="Envoyer cette carte dans l'exil" Click="SendTo_Exile"/>
+                </ContextMenu>
+            </Label.ContextMenu>
+        </Label>
+        <Image x:Name="img_view_12_J2" Grid.ColumnSpan="3" Height="400" Margin="-100,175,0,-71" VerticalAlignment="Top" Grid.Column="12" HorizontalAlignment="Left" Width="300"/>
+        <Image x:Name="img_view_13" Grid.ColumnSpan="3" Height="400" Margin="-130,-425,0,-71" VerticalAlignment="Top" Grid.Column="13" HorizontalAlignment="Left" Width="300"/>
         <Label x:Name="IsLinked_13" Grid.Column="13" Background="Transparent" Content="" />
         <Grid x:Name="grid_Card_13" Grid.Column="13" Margin="10" >
-            <Image x:Name="img_land_card_13"/>
+            <Image x:Name="img_Land_card_13"/>
             <Label x:Name="lbl_NbLands_13" BorderBrush="Black" Background="White" BorderThickness="1" Content="" HorizontalContentAlignment="Center" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="35" VerticalAlignment="Bottom" FontSize="15"/>
         </Grid>
+        <Label x:Name="lbl_img_13_events" Grid.Column="13" Background="Transparent" MouseEnter="Show_Card" MouseLeave="End_Show_Card" >
+            <Label.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Name="menuitem_13_1" Header="Envoyer cette carte dans le deck" Click="SendTo_Deck"/>
+                    <MenuItem Name="menuitem_13_2" Header="Envoyer cette carte dans le cimetière" Click="SendTo_Graveyard" />
+                    <MenuItem Name="menuitem_13_3" Header="Envoyer cette carte dans l'exil" Click="SendTo_Exile"/>
+                </ContextMenu>
+            </Label.ContextMenu>
+        </Label>
+        <Image x:Name="img_view_13_J2" Grid.ColumnSpan="3" Height="400" Margin="-130,175,0,-71" VerticalAlignment="Top" Grid.Column="13" HorizontalAlignment="Left" Width="300"/>
+        <Image x:Name="img_view_14_J1" Grid.ColumnSpan="3" Height="400" Margin="-215,-425,0,-71" VerticalAlignment="Top" Grid.Column="14" HorizontalAlignment="Left" Width="300"/>
         <Label x:Name="IsLinked_14" Grid.Column="14" Background="Transparent" Content="" />
         <Grid x:Name="grid_Card_14" Grid.Column="14" Margin="10" >
-            <Image x:Name="img_land_card_14"/>
+            <Image x:Name="img_Land_card_14"/>
             <Label x:Name="lbl_NbLands_14" BorderBrush="Black" Background="White" BorderThickness="1" Content="" HorizontalContentAlignment="Center" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="35" VerticalAlignment="Bottom" FontSize="15"/>
         </Grid>
+        <Label x:Name="lbl_img_14_events" Grid.Column="14" Background="Transparent" MouseEnter="Show_Card" MouseLeave="End_Show_Card" >
+            <Label.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Name="menuitem_14_1" Header="Envoyer cette carte dans le deck" Click="SendTo_Deck"/>
+                    <MenuItem Name="menuitem_14_2" Header="Envoyer cette carte dans le cimetière" Click="SendTo_Graveyard" />
+                    <MenuItem Name="menuitem_14_3" Header="Envoyer cette carte dans l'exil" Click="SendTo_Exile"/>
+                </ContextMenu>
+            </Label.ContextMenu>
+        </Label>
+        <Image x:Name="img_view_14_J2" Grid.ColumnSpan="3" Height="400" Margin="-215,175,0,-71" VerticalAlignment="Top" Grid.Column="14" HorizontalAlignment="Left" Width="300"/>
     </Grid>
 </UserControl>

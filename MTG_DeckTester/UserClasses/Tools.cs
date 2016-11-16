@@ -11,6 +11,8 @@ namespace MTG_DeckTester.UserClasses
         //Instance de la partie - GLOBALE
         public static Game CurrentGame = Game.GetInstance();
 
+        public static MainWindow CurrentMainWindow;
+
         /// <summary>
         /// Fonction de gestion des erreurs (Log + Affichage dans une message box)
         /// </summary>
@@ -243,8 +245,8 @@ namespace MTG_DeckTester.UserClasses
         /// <summary>
         /// Retourne l'indice de la grille où afficher la carte
         /// </summary>
-        /// <param name="ListCount">List.Count des cartes de la collection</param>
-        /// <returns>Indice du prochain endroit où afficher la carte</returns>
+        /// <param name="indiceCarte">Indice de la carte dans la collection</param>
+        /// <returns>Indice de l'endroit où afficher la carte</returns>
         public static int GetNextPlaceCard(int indiceCarte)
         {
             switch (indiceCarte)
@@ -284,6 +286,51 @@ namespace MTG_DeckTester.UserClasses
                     return -1;
             }
         }
+
+        /// <summary>
+        /// Retourne l'indice de la carte dans la collection par l'indice de l'image sur l'écran
+        /// </summary>
+        /// <param name="indiceCarte_OnBoard">Indice de l'image sur le terrain</param>
+        /// <returns>Indice de la carte dans la collection associée</returns>
+        public static int GetIndiceCardFromBoard(int indiceCarte_OnBoard)
+        {
+            switch (indiceCarte_OnBoard)
+            {
+                //7,8,6,9,5,10,4,11,3,12,2,13,1,14,0
+                case 0:
+                    return 14;
+                case 1:
+                    return 12;
+                case 2:
+                    return 10;
+                case 3:
+                    return 8;
+                case 4:
+                    return 6;
+                case 5:
+                    return 4;
+                case 6:
+                    return 2;
+                case 7:
+                    return 0;
+                case 8:
+                    return 1;
+                case 9:
+                    return 3;
+                case 10:
+                    return 5;
+                case 11:
+                    return 7;
+                case 12:
+                    return 9;
+                case 13:
+                    return 11;
+                case 14:
+                    return 13;
+                default:
+                    return -1;
+            }
+        }
     }
 
     /// <summary>
@@ -317,6 +364,9 @@ namespace MTG_DeckTester.UserClasses
 
     public enum ConfigKeys
     { IMG = 0, PLAYERS = 1, DECKS = 2, CARDS = 3, DECK_COLOR = 4, DUELS = 5 };
+
+    public enum PlaceInGame
+    { DECK = 0, CIMETIERE = 1, EXIL = 2, MAIN = 3, BOARD_TERRAINS = 4, BOARD_CREATURES = 5, BOARD_ARTEFACT = 5, UNDEFINED = 9 };
 
     public enum MasterType
     { TERRAIN = 0, CREATURE = 1, ARTEFACT = 2, ENCHANTEMENT = 3, EPHEMERE = 4, RITUEL = 5, UNDEFINED = 9 };

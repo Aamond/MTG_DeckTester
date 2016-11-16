@@ -11,6 +11,7 @@ namespace MTG_DeckTester
         public MainWindow()
         {
             InitializeComponent();
+            Tools.CurrentMainWindow = this;
             WindowState = WindowState.Maximized;
 
             Tools.CurrentGame = Game.GetInstance();
@@ -50,15 +51,13 @@ namespace MTG_DeckTester
             J2_Avatar.IsEnabled = false;
             J2_DeckLists.IsEnabled = false;
             J2_Hand.IsEnabled = false;
-            J2_Lands.IsEnabled = false;
-            J2_Creatures.IsEnabled = false;
-            J2_Specials.IsEnabled = false;
+            btn_Actions_J2.IsEnabled = false;
 
             //On mélange les decks
             Tools.Shuffle(Tools.CurrentGame.J1_Deck);
             Tools.Shuffle(Tools.CurrentGame.J2_Deck);
 
-            //On pioche 7 cartes dans chaque deck
+            //On pioche 7 cartes dans chaque deck(
             for (int cpt = 0; cpt < 7; cpt++)
             {
                 Tools.CurrentGame.J1_Main.Add(Tools.Draw(Tools.CurrentGame.J1_Deck));
@@ -66,6 +65,144 @@ namespace MTG_DeckTester
             }
             J1_Hand.Refresh();
             J2_Hand.Refresh();
+
+            J1_DeckLists.Refresh();            
+        }
+
+        /// <summary>
+        /// Refresh des uc Hand
+        /// </summary>
+        /// <param name="id_param">ID du joueur pour lequel on refresh la main</param>
+        public void uc_Hands_Refresh(int id_joueur_param)
+        {
+            switch (id_joueur_param)
+            {
+                case 1:
+                    J1_Hand.Refresh();
+                    break;
+                case 2:
+                    J2_Hand.Refresh();
+                    break;
+                case 9:
+                    J1_Hand.Refresh();
+                    J2_Hand.Refresh();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Refresh des uc deck
+        /// </summary>
+        /// <param name="id_param">ID du joueur pour lequel on refresh les listes de paquets</param>
+        public void uc_DeckLists_Refresh(int id_joueur_param)
+        {
+            switch (id_joueur_param)
+            {
+                case 1:
+                    J1_DeckLists.Refresh();
+                    break;
+                case 2:
+                    J2_DeckLists.Refresh();
+                    break;
+                case 9:
+                    J1_DeckLists.Refresh();
+                    J2_DeckLists.Refresh();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Refresh des uc Board_Lands
+        /// </summary>
+        /// <param name="id_param">ID du joueur pour lequel on refresh la partie du terrain dédié aux manas</param>
+        public void uc_Board_Lands_Refresh(int id_joueur_param)
+        {
+            switch (id_joueur_param)
+            {
+                case 1:
+                    J1_Lands.Refresh();
+                    break;
+                case 2:
+                    J2_Lands.Refresh();
+                    break;
+                case 9:
+                    J1_Lands.Refresh();
+                    J2_Lands.Refresh();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Refresh des uc Board_Creatures
+        /// </summary>
+        /// <param name="id_param">ID du joueur pour lequel on refresh la partie du terrain dédié aux créatures</param>
+        public void uc_Board_Creatures_Refresh(int id_joueur_param)
+        {
+            switch (id_joueur_param)
+            {
+                case 1:
+                    J1_Creatures.Refresh();
+                    break;
+                case 2:
+                    J2_Creatures.Refresh();
+                    break;
+                case 9:
+                    J1_Creatures.Refresh();
+                    J2_Creatures.Refresh();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Refresh des uc Board_Specials
+        /// </summary>
+        /// <param name="id_param">ID du joueur pour lequel on refresh la partie du terrain dédié aux cartes enchantements/artefacts ...</param>
+        public void uc_Board_Specials_Refresh(int id_joueur_param)
+        {
+            switch (id_joueur_param)
+            {
+                case 1:
+                    J1_Specials.Refresh();
+                    break;
+                case 2:
+                    J2_Specials.Refresh();
+                    break;
+                case 9:
+                    J1_Specials.Refresh();
+                    J2_Specials.Refresh();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void OpenActionMenu(object sender, RoutedEventArgs e)
+        {
+            int CptCartes;
+
+            for(CptCartes = Tools.CurrentGame.J1_Main.Count - 1; CptCartes >= 0; CptCartes--)
+            {
+                Tools.CurrentGame.J1_Deck.Cartes.Add(Tools.CurrentGame.J1_Main[CptCartes]);
+                Tools.CurrentGame.J1_Main.Remove(Tools.CurrentGame.J1_Main[CptCartes]);
+            }
+
+            Tools.Shuffle(Tools.CurrentGame.J1_Deck);
+
+            for(CptCartes = 0; CptCartes < 7; CptCartes++)
+            {
+                Tools.CurrentGame.J1_Main.Add(Tools.Draw(Tools.CurrentGame.J1_Deck));
+            }
+
+            uc_Hands_Refresh(1);
+            uc_DeckLists_Refresh(1);
         }
     }
 }

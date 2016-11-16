@@ -24,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -81,14 +82,14 @@
     <Compile Include="Connexion.xaml.cs">
       <DependentUpon>Connexion.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SearchCard.xaml.cs">
+      <DependentUpon>SearchCard.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserClasses\Card.cs" />
-    <Compile Include="UserClasses\Creature_Card.cs" />
     <Compile Include="UserClasses\Deck.cs" />
     <Compile Include="UserClasses\Game.cs" />
     <Compile Include="UserClasses\Infos_Duel.cs" />
-    <Compile Include="UserClasses\Land_Card.cs" />
     <Compile Include="UserClasses\Player.cs" />
-    <Compile Include="UserClasses\Special_Card.cs" />
     <Compile Include="UserClasses\Tools.cs" />
     <Compile Include="UserControls\uc_Avatar.xaml.cs">
       <DependentUpon>uc_Avatar.xaml</DependentUpon>
@@ -124,6 +125,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="SearchCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\uc_Avatar.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

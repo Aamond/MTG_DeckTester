@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace MTG_DeckTester.UserClasses
 {
@@ -10,6 +12,16 @@ namespace MTG_DeckTester.UserClasses
         public string MasterType { get; set; }
         public bool EstLegendaire { get; set; }
 
+        [XmlIgnore]
+        public List<Card> AttachedCards { get; set; }
+        [XmlIgnore]
+        public bool IsLinked { get; set; }
+        [XmlIgnore]
+        public Marqueur Marqueur { get; set; }
+
+        [XmlIgnore]
+        public PlaceInGame EtatCarte { get; set; }
+
         /// <summary>
         /// Constructeur par défaut
         /// </summary>
@@ -19,6 +31,12 @@ namespace MTG_DeckTester.UserClasses
             Nom_Carte = null;
             MasterType = null;
             EstLegendaire = false;
+
+            AttachedCards = new List<Card>();
+            IsLinked = false;
+            Marqueur = new Marqueur();
+
+            EtatCarte = PlaceInGame.DECK;
         }
 
         /// <summary>
@@ -34,6 +52,12 @@ namespace MTG_DeckTester.UserClasses
             Nom_Carte = nom;
             MasterType = mastertype;
             EstLegendaire = legendaire;
+
+            AttachedCards = new List<Card>();
+            IsLinked = false;
+            Marqueur = new Marqueur();
+
+            EtatCarte = PlaceInGame.DECK;
         }
     }
 }

@@ -25,15 +25,14 @@
             <Label x:Name="Lbl_deck_event" Grid.Row="1" Background="Transparent">
                 <Label.ContextMenu>
                     <ContextMenu>
-                        <MenuItem Header="Piocher une carte" />
-                        <MenuItem Header="Chercher une carte"/>
+                        <MenuItem Header="[D] - Piocher une carte" Click="D_DrawCard" />
+                        <MenuItem Header="[D] - Chercher une carte" Click="D_SeekCard" />
+                        <MenuItem Header="[D] - Mettre la carte suivante dans le cimetière" Click="D_PutInGraveyard" />
+                        <MenuItem Header="[D] - Mettre la carte suivante dans l'exil" Click="D_PutInExile" />
+                        <MenuItem Header="[D] - Révéler la carte suivante" Click="D_ShowNextCard" />
+                        <MenuItem Header="[D] - Masquer la carte suivante" Click="D_HideNextCard" />
                     </ContextMenu>
                 </Label.ContextMenu>
-                <Label.ToolTip>
-                    <ToolTip>
-                        <TextBlock>Il reste 53 cartes</TextBlock>
-                    </ToolTip>
-                </Label.ToolTip>
             </Label>
         </Grid>
         <Border BorderBrush="Black" BorderThickness="1" Grid.Column="2"/>
@@ -44,6 +43,14 @@
             </Grid.RowDefinitions>
             <Label x:Name="Lbl_Graveyard" Grid.Row="0" Content="CIMETIÈRE" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" FontFamily="Arial" FontSize="12" FontWeight="Bold" />
             <Image x:Name="img_graveyard_card" Grid.Row="1"/>
+            <Label x:Name="Lbl_graveyard_event" Grid.Row="1" Background="Transparent">
+                <Label.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="[C] - Chercher une carte" Click="C_SeekCard" />
+                        <MenuItem Header="[C] - Mettre la carte suivante dans l'exil" Click="C_PutInExile" />
+                    </ContextMenu>
+                </Label.ContextMenu>
+            </Label>
         </Grid>
         <Border BorderBrush="Black" BorderThickness="1" Grid.Column="4"/>
         <Grid x:Name="grid_exile" Grid.Column="4" Margin="5" >
@@ -53,6 +60,13 @@
             </Grid.RowDefinitions>
             <Label x:Name="Lbl_Exile" Grid.Row="0" Content="EXIL" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" FontFamily="Arial" FontSize="12" FontWeight="Bold" />
             <Image x:Name="img_exile_card" Grid.Row="1"/>
+            <Label x:Name="Lbl_exil_event" Grid.Row="1" Background="Transparent">
+                <Label.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="[E] - Chercher une carte" Click="E_SeekCard" />
+                    </ContextMenu>
+                </Label.ContextMenu>
+            </Label>
         </Grid>
     </Grid>
 </UserControl>

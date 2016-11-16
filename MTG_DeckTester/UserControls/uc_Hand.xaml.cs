@@ -152,7 +152,7 @@ namespace MTG_DeckTester.UserControls
                 //Les évènements du joueur 2 seront gérés par le module de communication
                 if (ID_Joueur == 1)
                 {
-                    indice_card = Int32.Parse((sender as Image).Name.Substring(9, 1));
+                    indice_card = Int32.Parse((sender as Label).Name.Substring(8, 1));
                     typecard = Tools.GetMasterType((Tools.CurrentGame.J1_Main[indice_card].MasterType));
 
                     switch (typecard)
@@ -163,6 +163,7 @@ namespace MTG_DeckTester.UserControls
                             creaInstance = new Creature_Card(Tools.CurrentGame.J1_Main[indice_card].ID_Carte, Tools.CurrentGame.J1_Main[indice_card].Nom_Carte, Tools.CurrentGame.J1_Main[indice_card].MasterType, Tools.CurrentGame.J1_Main[indice_card].EstLegendaire);
                             Tools.CurrentGame.J1_Board_Creatures.Add(creaInstance);
                             Tools.CurrentGame.J1_Main.Remove(Tools.CurrentGame.J1_Main[indice_card]);
+                            Tools.CurrentMainWindow.uc_Board_Creatures_Refresh(ID_Joueur);
                             break;
 
                         case MasterType.TERRAIN:
@@ -171,6 +172,7 @@ namespace MTG_DeckTester.UserControls
                             landInstance = new Land_Card(Tools.CurrentGame.J1_Main[indice_card].ID_Carte, Tools.CurrentGame.J1_Main[indice_card].Nom_Carte, Tools.CurrentGame.J1_Main[indice_card].MasterType, Tools.CurrentGame.J1_Main[indice_card].EstLegendaire);
                             Tools.CurrentGame.J1_Board_Lands.Add(landInstance);
                             Tools.CurrentGame.J1_Main.Remove(Tools.CurrentGame.J1_Main[indice_card]);
+                            Tools.CurrentMainWindow.uc_Board_Lands_Refresh(ID_Joueur);
                             break;
 
                         case MasterType.ENCHANTEMENT:
@@ -180,6 +182,7 @@ namespace MTG_DeckTester.UserControls
                             specInstance = new Special_Card(Tools.CurrentGame.J1_Main[indice_card].ID_Carte, Tools.CurrentGame.J1_Main[indice_card].Nom_Carte, Tools.CurrentGame.J1_Main[indice_card].MasterType, Tools.CurrentGame.J1_Main[indice_card].EstLegendaire);
                             Tools.CurrentGame.J1_Board_Specials.Add(specInstance);
                             Tools.CurrentGame.J1_Main.Remove(Tools.CurrentGame.J1_Main[indice_card]);
+                            Tools.CurrentMainWindow.uc_Board_Specials_Refresh(ID_Joueur);
                             break;
 
                         case MasterType.RITUEL:
@@ -189,6 +192,7 @@ namespace MTG_DeckTester.UserControls
                             img_Spell.Source = new BitmapImage(new Uri(Tools.GetPath(ConfigKeys.CARDS) + Tools.CurrentGame.J1_Main[indice_card].ID_Carte));
                             Tools.CurrentGame.J1_Cimetiere.Add(Tools.CurrentGame.J1_Main[indice_card]);
                             Tools.CurrentGame.J1_Main.Remove(Tools.CurrentGame.J1_Main[indice_card]);
+                            Tools.CurrentMainWindow.uc_DeckLists_Refresh(ID_Joueur);
                             break;
 
                         default:
@@ -199,53 +203,89 @@ namespace MTG_DeckTester.UserControls
             }
         }
 
+        /// <summary>
+        /// Affiche la carte en plus gros au dessus au survol de la carte dans la main
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Show_Card(object sender, System.Windows.Input.MouseEventArgs e)
         {
             int indice_card;
+            Image img_tmp;
+            string NomImage_Carte;
             string NomImage_Visionneuse;
 
             //On gère ici uniquement les évènements du joueur 1
             //Les évènements du joueur 2 seront gérés par le module de communication
             if (ID_Joueur == 1)
             {
-                indice_card = Int32.Parse((sender as Image).Name.Substring(9, 1));
+                img_tmp = new Image();
+                indice_card = Int32.Parse((sender as Label).Name.Substring(8, 1));
                 NomImage_Visionneuse = "img_view_" + indice_card;
+                NomImage_Carte = "img_card_" + indice_card;
 
-                if((sender as Image).Source != new BitmapImage())
+                foreach(var img_card in MainGrid_Hand.Children)
                 {
-                    foreach (var img in MainGrid_Hand.Children)
+                    if (img_card is Image && (img_card as Image).Name == NomImage_Carte)
                     {
-                        if (img is Image && (img as Image).Name == NomImage_Visionneuse)
+                        img_tmp = img_card as Image;
+                        break;
+                    }
+                }
+
+                if (img_tmp.Source != new BitmapImage())
+                {
+                    foreach (var img_view in MainGrid_Hand.Children)
+                    {
+                        if (img_view is Image && (img_view as Image).Name == NomImage_Visionneuse)
                         {
-                            (img as Image).Source = (sender as Image).Source;
-                            (img as Image).Visibility = System.Windows.Visibility.Visible;
+                            (img_view as Image).Source = img_tmp.Source;
+                            (img_view as Image).Visibility = System.Windows.Visibility.Visible;
                             break;
                         }
                     }
-                }
+                }                
             }
         }
 
+        /// <summary>
+        /// Cache l'affichage en plus gros de la carte quand on quitte l'image de la carte dans la main
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void End_Show_Card(object sender, System.Windows.Input.MouseEventArgs e)
         {
             int indice_card;
+            Image img_tmp;
+            string NomImage_Carte;
             string NomImage_Visionneuse;
 
             //On gère ici uniquement les évènements du joueur 1
             //Les évènements du joueur 2 seront gérés par le module de communication
             if (ID_Joueur == 1)
             {
-                indice_card = Int32.Parse((sender as Image).Name.Substring(9, 1));
+                img_tmp = new Image();
+                indice_card = Int32.Parse((sender as Label).Name.Substring(8, 1));
                 NomImage_Visionneuse = "img_view_" + indice_card;
+                NomImage_Carte = "img_card_" + indice_card;
 
-                if ((sender as Image).Source != new BitmapImage())
+                foreach (var img_card in MainGrid_Hand.Children)
                 {
-                    foreach (var img in MainGrid_Hand.Children)
+                    if (img_card is Image && (img_card as Image).Name == NomImage_Carte)
                     {
-                        if (img is Image && (img as Image).Name == NomImage_Visionneuse)
+                        img_tmp = img_card as Image;
+                        break;
+                    }
+                }
+
+                if (img_tmp.Source != new BitmapImage())
+                {
+                    foreach (var img_view in MainGrid_Hand.Children)
+                    {
+                        if (img_view is Image && (img_view as Image).Name == NomImage_Visionneuse)
                         {
-                            (img as Image).Source = new BitmapImage();
-                            (img as Image).Visibility = System.Windows.Visibility.Collapsed;
+                            (img_view as Image).Source = new BitmapImage();
+                            (img_view as Image).Visibility = System.Windows.Visibility.Collapsed;
                             break;
                         }
                     }
@@ -260,9 +300,109 @@ namespace MTG_DeckTester.UserControls
         /// <param name="e">Double-clic</param>
         private void End_Spell(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            if(e.ClickCount == 2)
+            if (e.ClickCount == 2)
             {
                 img_Spell.Source = new BitmapImage();
+            }
+        }
+
+        /// <summary>
+        /// Envoie la carte ciblée de la main du joueur dans le deck, on mélange ensuite le deck
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SendTo_Deck(object sender, System.Windows.RoutedEventArgs e)
+        {
+            int indice_card;
+            string CurrentImg;
+
+            if (ID_Joueur == 1)
+            {
+                indice_card = int.Parse((sender as Image).Name.Substring(9, 1));
+                CurrentImg = "img_card_" + indice_card;
+
+                if ((sender as Image).Source != new BitmapImage())
+                {
+                    foreach (var img in MainGrid_Hand.Children)
+                    {
+                        if (img is Image && (img as Image).Name == CurrentImg)
+                        {
+                            (img as Image).Source = new BitmapImage();
+                            Tools.CurrentGame.J1_Deck.Cartes.Add(Tools.CurrentGame.J1_Main[indice_card]);
+                            Tools.CurrentGame.J1_Main.Remove(Tools.CurrentGame.J1_Main[indice_card]);
+                            Refresh();
+                            Tools.Shuffle(Tools.CurrentGame.J1_Deck);
+                            Tools.CurrentMainWindow.uc_DeckLists_Refresh(ID_Joueur);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Envoie la carte ciblée de la main du joueur dans le cimetière
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SendTo_Graveyard(object sender, System.Windows.RoutedEventArgs e)
+        {
+            int indice_card;
+            string CurrentImg;
+
+            if (ID_Joueur == 1)
+            {
+                indice_card = int.Parse((sender as Image).Name.Substring(9, 1));
+                CurrentImg = "img_card_" + indice_card;
+
+                if ((sender as Image).Source != new BitmapImage())
+                {
+                    foreach (var img in MainGrid_Hand.Children)
+                    {
+                        if (img is Image && (img as Image).Name == CurrentImg)
+                        {
+                            (img as Image).Source = new BitmapImage();
+                            Tools.CurrentGame.J1_Cimetiere.Add(Tools.CurrentGame.J1_Main[indice_card]);
+                            Tools.CurrentGame.J1_Main.Remove(Tools.CurrentGame.J1_Main[indice_card]);
+                            Refresh();
+                            Tools.CurrentMainWindow.uc_DeckLists_Refresh(ID_Joueur);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Envoie la carte ciblée de la main du joueur à l'exil
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SendTo_Exile(object sender, System.Windows.RoutedEventArgs e)
+        {
+            int indice_card;
+            string CurrentImg;
+
+            if (ID_Joueur == 1)
+            {
+                indice_card = int.Parse((sender as Image).Name.Substring(9, 1));
+                CurrentImg = "img_card_" + indice_card;
+
+                if ((sender as Image).Source != new BitmapImage())
+                {
+                    foreach (var img in MainGrid_Hand.Children)
+                    {
+                        if (img is Image && (img as Image).Name == CurrentImg)
+                        {
+                            (img as Image).Source = new BitmapImage();
+                            Tools.CurrentGame.J1_Exil.Add(Tools.CurrentGame.J1_Main[indice_card]);
+                            Tools.CurrentGame.J1_Main.Remove(Tools.CurrentGame.J1_Main[indice_card]);
+                            Refresh();
+                            Tools.CurrentMainWindow.uc_DeckLists_Refresh(ID_Joueur);
+                            break;
+                        }
+                    }
+                }
             }
         }
     }

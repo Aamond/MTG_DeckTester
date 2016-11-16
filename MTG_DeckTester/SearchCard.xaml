@@ -1,0 +1,12 @@
+﻿<Window x:Class="MTG_DeckTester.SearchCard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MTG_DeckTester"
+        mc:Ignorable="d"
+        Title="Rechercher une carte" Height="860" MinHeight="860" MaxHeight="860" Width="450" MinWidth="450" MaxWidth="450" WindowStartupLocation="CenterScreen">
+    <ScrollViewer Margin="0,0,2,0" Width="440">
+        <WrapPanel x:Name="wpCards" Orientation="Vertical" Width="420"/>
+    </ScrollViewer>
+</Window>

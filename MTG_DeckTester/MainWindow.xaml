@@ -22,12 +22,14 @@
         <!-- PARTIE DE L'ADVERSAIRE -->
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200*"/>
+                <ColumnDefinition Width="150*"/>
+                <ColumnDefinition Width="50*"/>
                 <ColumnDefinition Width="360*"/>
                 <ColumnDefinition Width="100*"/>
             </Grid.ColumnDefinitions>
-            <UserControls:uc_Avatar x:Name="J2_Avatar" Grid.Column="2" Margin="10"/>
-            <UserControls:uc_Hand x:Name="J2_Hand" Grid.Column="1" Margin="10" MaxWidth="900" />
+            <UserControls:uc_Avatar x:Name="J2_Avatar" Grid.Column="3" Margin="10"/>
+            <UserControls:uc_Hand x:Name="J2_Hand" Grid.Column="2" Margin="10" MaxWidth="900" />
+            <Button x:Name="btn_Actions_J2" Grid.Column="1" Content="Actions" Margin="20" Click="OpenActionMenu"/>
             <UserControls:uc_Board_Deck x:Name="J2_DeckLists" Grid.Column="0" Margin="30,10,0,10" MaxWidth="300" HorizontalAlignment="Left" Width="539" />
             <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="3"/>
         </Grid>
@@ -47,11 +49,13 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="100*"/>
                 <ColumnDefinition Width="360*"/>
-                <ColumnDefinition Width="200*"/>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="150*"/>
             </Grid.ColumnDefinitions>
             <UserControls:uc_Avatar x:Name="J1_Avatar" Grid.Column="0" Margin="10"/>
             <UserControls:uc_Hand x:Name="J1_Hand" Grid.Column="1" Margin="10" MaxWidth="900" />
-            <UserControls:uc_Board_Deck x:Name="J1_DeckLists" Grid.Column="2" Margin="0,10,30,10" MaxWidth="300" HorizontalAlignment="Right" Width="539" />
+            <Button x:Name="btn_Actions_J1" Grid.Column="2" Content="Actions" Margin="20" Click="OpenActionMenu"/>
+            <UserControls:uc_Board_Deck x:Name="J1_DeckLists" Grid.Column="3" Margin="0,10,30,10" MaxWidth="300" HorizontalAlignment="Right" Width="539" />
             <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="3"/>
         </Grid>
     </Grid>
