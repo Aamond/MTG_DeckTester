@@ -87,8 +87,10 @@
     </Compile>
     <Compile Include="UserClasses\Card.cs" />
     <Compile Include="UserClasses\Deck.cs" />
+    <Compile Include="UserClasses\Deck_Tools.cs" />
     <Compile Include="UserClasses\Game.cs" />
     <Compile Include="UserClasses\Infos_Duel.cs" />
+    <Compile Include="UserClasses\Marqueur.cs" />
     <Compile Include="UserClasses\Player.cs" />
     <Compile Include="UserClasses\Tools.cs" />
     <Compile Include="UserControls\uc_Avatar.xaml.cs">

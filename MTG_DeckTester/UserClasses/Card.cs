@@ -18,7 +18,6 @@ namespace MTG_DeckTester.UserClasses
         public bool IsLinked { get; set; }
         [XmlIgnore]
         public Marqueur Marqueur { get; set; }
-
         [XmlIgnore]
         public PlaceInGame EtatCarte { get; set; }
 

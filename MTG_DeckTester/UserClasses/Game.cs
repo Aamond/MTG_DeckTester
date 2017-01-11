@@ -11,12 +11,10 @@ namespace MTG_DeckTester.UserClasses
         private static Game instance;
 
         public Player J1_Player { get; set; }
-        public List<Card> J1_Main { get; set; }
         public Deck J1_Deck { get; set; }
         
 
         public Player J2_Player { get; set; }
-        public List<Card> J2_Main { get; set; }
         public Deck J2_Deck { get; set; }
 
         /// <summary>
@@ -25,11 +23,9 @@ namespace MTG_DeckTester.UserClasses
         private Game()
         {
             J1_Player = new Player();
-            J1_Main = new List<Card>();
             J1_Deck = new Deck();
 
             J2_Player = new Player();
-            J2_Main = new List<Card>();
             J2_Deck = new Deck();
         }
 
